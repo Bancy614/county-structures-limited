@@ -1,0 +1,50 @@
+{
+  "name": "Enquiry",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "project_type": {
+      "type": "string"
+    },
+    "budget": {
+      "type": "string"
+    },
+    "timeline": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "attachment_url": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "New",
+        "Contacted",
+        "Closed"
+      ],
+      "default": "New"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "message"
+  ]
+}

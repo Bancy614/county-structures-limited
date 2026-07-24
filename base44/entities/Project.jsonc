@@ -1,0 +1,93 @@
+{
+  "name": "Project",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Commercial",
+        "Residential",
+        "Institutional",
+        "Industrial",
+        "Civil Works"
+      ],
+      "default": "Commercial"
+    },
+    "service_type": {
+      "type": "string",
+      "enum": [
+        "New Build",
+        "Renovation",
+        "Design",
+        "Consultancy",
+        "Construction"
+      ],
+      "default": "Construction"
+    },
+    "location": {
+      "type": "string"
+    },
+    "client": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Completed",
+        "Ongoing",
+        "Planned"
+      ],
+      "default": "Completed"
+    },
+    "budget": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "area": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "challenge": {
+      "type": "string"
+    },
+    "solution": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "gallery_urls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "services_used": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "completion_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}
