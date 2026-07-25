@@ -1,32 +1,30 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, Eye, ShieldCheck, Heart, Lightbulb, Handshake, Leaf } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Target, Eye, ShieldCheck, Heart, Lightbulb, Leaf, Award, BadgeCheck, Ruler, HardHat, CheckCircle2, ArrowRight } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 import Reveal from '@/components/animations/Reveal';
 import AnimatedCounter from '@/components/animations/AnimatedCounter';
+import SEO from '@/components/SEO';
+import { stats, timeline, certifications, values, IMG } from '@/data/companyData';
 
-const OVERVIEW_IMG = 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/db98037dc_generated_5dfc5510.png';
-
-const stats = [
-  { value: 2011, label: 'Established', prefix: '' },
-  { value: 2015, label: 'Incorporated', prefix: '' },
-  { value: 5, suffix: '+', label: 'Expert Professionals' },
-  { value: 400, suffix: '+', label: 'ESIA/EA Projects' },
-];
-
-const values = [
-  { icon: ShieldCheck, title: 'Excellence', desc: 'Delivering beyond expectations on every project, from concept to handover.' },
-  { icon: Heart, title: 'Integrity', desc: 'Transparent processes, honest communication, and ethical practices.' },
-  { icon: Lightbulb, title: 'Innovation', desc: 'BIM, modern engineering methods, and sustainable building solutions.' },
-  { icon: Leaf, title: 'Sustainability', desc: 'Environmental responsibility in every project we undertake.' },
-];
+const certIconMap = { Award, Leaf, ShieldCheck, Ruler, HardHat, BadgeCheck };
+const valueIconMap = { ShieldCheck, Heart, Lightbulb, Leaf };
 
 export default function About() {
   return (
     <div>
+      <SEO
+        title="About Us"
+        description="County Structures Limited — a premier Kenyan development consultancy and construction services firm since 2011. Learn about our mission, vision, values, team, and commitment to engineering excellence."
+        keywords="about County Structures, construction company Kenya, development consultancy, company history, mission vision values, NCA registered contractor"
+        image={IMG.plans}
+      />
+
+      {/* Hero */}
       <section className="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden bg-charcoal">
         <div className="absolute inset-0">
-          <Image src={OVERVIEW_IMG} alt="Architectural blueprints" fittingType="fill" className="w-full h-full object-cover" />
+          <Image src={IMG.plans} alt="Architectural blueprints" fittingType="fill" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/30" />
         </div>
         <div className="relative max-w-9xl mx-auto px-6 pb-12">
@@ -37,8 +35,8 @@ export default function About() {
 
       {/* Stats */}
       <section className="py-16 bg-charcoal">
-        <div className="max-w-9xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-          {stats.map((s, i) => (
+        <div className="max-w-9xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+          {stats.slice(0, 6).map((s, i) => (
             <Reveal key={s.label} delay={i * 0.1}>
               <div className="font-heading text-4xl lg:text-5xl font-bold text-primary"><AnimatedCounter value={s.value} prefix={s.prefix || ''} suffix={s.suffix || ''} /></div>
               <div className="text-xs font-mono uppercase tracking-widest text-white/50 mt-2">{s.label}</div>
@@ -62,8 +60,37 @@ export default function About() {
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* Timeline */}
       <section className="py-24 lg:py-32 bg-secondary/30">
+        <div className="max-w-9xl mx-auto px-6">
+          <Reveal>
+            <div className="text-center mb-14">
+              <div className="flex items-center justify-center gap-2 mb-4"><div className="w-8 h-px bg-primary" /><span className="text-xs font-mono uppercase tracking-widest text-primary font-semibold">Our Journey</span><div className="w-8 h-px bg-primary" /></div>
+              <h2 className="font-heading text-4xl lg:text-5xl font-bold tracking-tight">Milestones & Growth</h2>
+            </div>
+          </Reveal>
+          <div className="relative">
+            <div className="absolute left-4 lg:left-1/2 lg:-translate-x-1/2 top-0 bottom-0 w-px bg-border" />
+            <div className="space-y-12">
+              {timeline.map((t, i) => (
+                <Reveal key={t.year} delay={i * 0.1}>
+                  <div className={`relative flex items-start gap-6 lg:gap-0 ${i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
+                    <div className="absolute left-4 lg:left-1/2 lg:-translate-x-1/2 w-4 h-4 rounded-full bg-primary ring-4 ring-background z-10 mt-2" />
+                    <div className={`pl-12 lg:pl-0 lg:w-1/2 ${i % 2 === 0 ? 'lg:pr-12 lg:text-right' : 'lg:pl-12'}`}>
+                      <span className="font-heading text-3xl font-bold text-primary block mb-2">{t.year}</span>
+                      <h3 className="font-heading text-xl font-bold mb-2">{t.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{t.desc}</p>
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-24 lg:py-32 bg-background">
         <div className="max-w-9xl mx-auto px-6 grid lg:grid-cols-2 gap-8">
           <Reveal>
             <div className="p-10 rounded-2xl bg-card border border-border/40 h-full">
@@ -83,19 +110,53 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="py-24 lg:py-32 bg-background">
+      <section className="py-24 lg:py-32 bg-secondary/30">
         <div className="max-w-9xl mx-auto px-6">
           <Reveal><div className="text-center mb-14"><div className="flex items-center justify-center gap-2 mb-4"><div className="w-8 h-px bg-primary" /><span className="text-xs font-mono uppercase tracking-widest text-primary font-semibold">Core Values</span><div className="w-8 h-px bg-primary" /></div><h2 className="font-heading text-4xl lg:text-5xl font-bold tracking-tight">What Drives Us</h2></div></Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((v, i) => (
-              <Reveal key={v.title} delay={i * 0.1}>
-                <div className="p-7 rounded-xl border border-border/40 hover:border-primary/40 hover:shadow-lg transition-all text-center h-full">
-                  <div className="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-5 mx-auto"><v.icon className="w-7 h-7" strokeWidth={1.5} /></div>
-                  <h3 className="font-heading text-lg font-bold mb-2">{v.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{v.desc}</p>
-                </div>
-              </Reveal>
-            ))}
+            {values.map((v, i) => {
+              const Icon = valueIconMap[v.icon] || ShieldCheck;
+              return (
+                <Reveal key={v.title} delay={i * 0.1}>
+                  <div className="p-7 rounded-xl border border-border/40 bg-card hover:border-primary/40 hover:shadow-lg transition-all text-center h-full">
+                    <div className="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-5 mx-auto"><Icon className="w-7 h-7" strokeWidth={1.5} /></div>
+                    <h3 className="font-heading text-lg font-bold mb-2">{v.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{v.desc}</p>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section className="py-24 lg:py-32 bg-background">
+        <div className="max-w-9xl mx-auto px-6">
+          <Reveal>
+            <div className="text-center mb-14">
+              <div className="flex items-center justify-center gap-2 mb-4"><div className="w-8 h-px bg-primary" /><span className="text-xs font-mono uppercase tracking-widest text-primary font-semibold">Accreditations</span><div className="w-8 h-px bg-primary" /></div>
+              <h2 className="font-heading text-4xl lg:text-5xl font-bold tracking-tight">Certifications & Registrations</h2>
+              <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">Our professional credentials reflect our commitment to quality, safety, and regulatory compliance.</p>
+            </div>
+          </Reveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {certifications.map((c, i) => {
+              const Icon = certIconMap[c.icon] || Award;
+              return (
+                <Reveal key={c.name} delay={i * 0.08}>
+                  <div className="flex items-start gap-4 p-7 rounded-xl border border-border/40 bg-card hover:border-primary/40 hover:shadow-lg transition-all h-full">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                      <Icon className="w-6 h-6" strokeWidth={1.5} />
+                    </div>
+                    <div>
+                      <h3 className="font-heading text-base font-bold mb-1">{c.name}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
+                    </div>
+                  </div>
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -113,6 +174,17 @@ export default function About() {
               ))}
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-primary/5 border-t border-border/40 text-center">
+        <div className="max-w-2xl mx-auto px-6">
+          <h2 className="font-heading text-3xl lg:text-4xl font-bold mb-4">Partner With Us</h2>
+          <p className="text-muted-foreground mb-8 text-lg">Ready to build something extraordinary? Let's discuss your next project.</p>
+          <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-primary text-primary-foreground font-semibold hover:scale-105 transition-all">
+            Start Your Build <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
     </div>

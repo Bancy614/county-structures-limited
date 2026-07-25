@@ -4,63 +4,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, ArrowUpRight, Calendar } from 'lucide-react';
 import Reveal from '@/components/animations/Reveal';
 import { Image } from '@/components/ui/image';
+import { projects as allProjects } from '@/data/companyData';
 
-const projects = [
-  {
-    title: 'Africa Sand Dam Foundation Office & Training Hall',
-    location: 'Masii, Machakos',
-    category: 'Commercial',
-    status: 'Ongoing',
-    service: 'Construction & Project Management',
-    image: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/b77b3b2bf_generated_cda1939e.png',
-    large: true,
-  },
-  {
-    title: '30-Room Guest House',
-    location: 'Machakos Town',
-    category: 'Commercial',
-    status: 'Ongoing',
-    service: 'Design, PM & Construction',
-    image: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/a1a965a31_generated_cd84835d.png',
-    large: false,
-  },
-  {
-    title: "Murang'a University Games Infrastructure",
-    location: "Murang'a",
-    category: 'Institutional',
-    status: 'Ongoing',
-    service: 'Master Plan & Layout Design',
-    image: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/bd6ba0f94_generated_76eb3e8c.png',
-    large: false,
-  },
-  {
-    title: 'NAMA Energy Petrol Station',
-    location: 'Narok Town',
-    category: 'Commercial',
-    status: 'Completed',
-    service: 'Construction',
-    image: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/b77b3b2bf_generated_cda1939e.png',
-    large: false,
-  },
-  {
-    title: 'Samar Towers Apartments',
-    location: 'Nairobi',
-    category: 'Residential',
-    status: 'Completed',
-    service: 'Construction',
-    image: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/a1a965a31_generated_cd84835d.png',
-    large: true,
-  },
-  {
-    title: "Tai's Farm Abattoir",
-    location: 'Kenya',
-    category: 'Industrial',
-    status: 'Completed',
-    service: 'EIA Consulting & Construction',
-    image: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/bd6ba0f94_generated_76eb3e8c.png',
-    large: false,
-  },
-];
+const projects = allProjects
+  .filter((p) => p.featured)
+  .map((p, i) => ({ ...p, large: i === 0 || i === 3 }));
 
 const filters = ['All', 'Commercial', 'Residential', 'Institutional', 'Industrial'];
 
@@ -102,7 +50,7 @@ export default function FeaturedProjects() {
           <AnimatePresence>
             {filtered.map((p, i) => (
               <motion.div
-                key={p.title}
+                key={p.slug}
                 layout
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -110,7 +58,7 @@ export default function FeaturedProjects() {
                 transition={{ duration: 0.4, delay: i * 0.05 }}
                 className={p.large ? 'md:col-span-2' : ''}
               >
-                <Link to="/projects" className="group relative block rounded-xl overflow-hidden aspect-[4/3] shadow-lg">
+                <Link to={`/projects/${p.slug}`} className="group relative block rounded-xl overflow-hidden aspect-[4/3] shadow-lg">
                   <Image src={p.image} alt={p.title} fittingType="fill" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
                   {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/20 to-transparent" />
@@ -131,7 +79,7 @@ export default function FeaturedProjects() {
                     <h3 className="font-heading text-lg lg:text-xl font-bold text-white leading-tight mb-1">{p.title}</h3>
                     <div className="flex items-center gap-4 text-sm text-white/60">
                       <span className="flex items-center gap-1"><MapPin className="w-3.5 h-3.5" /> {p.location}</span>
-                      <span className="hidden sm:flex items-center gap-1"><Calendar className="w-3.5 h-3.5" /> {p.service}</span>
+                      <span className="hidden sm:flex items-center gap-1"><Calendar className="w-3.5 h-3.5" /> {p.service_type}</span>
                     </div>
                   </div>
                 </Link>

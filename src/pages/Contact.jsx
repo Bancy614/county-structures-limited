@@ -8,6 +8,9 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Image } from '@/components/ui/image';
 import Reveal from '@/components/animations/Reveal';
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
+import SEO from '@/components/SEO';
+import { faqs, IMG } from '@/data/companyData';
 import { base44 } from '@/api/base44Client';
 
 const contactInfo = [
@@ -43,6 +46,12 @@ export default function Contact() {
 
   return (
     <div>
+      <SEO
+        title="Contact Us"
+        description="Get in touch with County Structures Limited. Request a quote, send an inquiry, or visit our office in Machakos, Kenya. Phone: +254 721 466 368."
+        keywords="contact County Structures, construction quote Kenya, project inquiry, Machakos construction office, Nairobi construction company contact"
+        image={IMG.site}
+      />
       <section className="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden bg-charcoal">
         <div className="absolute inset-0">
           <Image src="https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/19bf1f8a6_generated_16dbb96d.png" alt="Construction site" fittingType="fill" className="w-full h-full object-cover" />
@@ -119,6 +128,28 @@ export default function Contact() {
                 ))}
               </div>
             </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-24 lg:py-32 bg-secondary/30">
+        <div className="max-w-3xl mx-auto px-6">
+          <Reveal>
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-2 mb-4"><div className="w-8 h-px bg-primary" /><span className="text-xs font-mono uppercase tracking-widest text-primary font-semibold">FAQ</span><div className="w-8 h-px bg-primary" /></div>
+              <h2 className="font-heading text-4xl lg:text-5xl font-bold tracking-tight">Frequently Asked Questions</h2>
+            </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <Accordion type="single" collapsible className="space-y-3">
+              {faqs.map((faq, i) => (
+                <AccordionItem key={i} value={`item-${i}`} className="rounded-xl border border-border/40 bg-card px-6 hover:border-primary/30 transition-colors">
+                  <AccordionTrigger className="font-heading text-base font-bold text-left hover:no-underline">{faq.q}</AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">{faq.a}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </Reveal>
         </div>
       </section>

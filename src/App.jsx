@@ -14,6 +14,8 @@ import Services from '@/pages/Services';
 import Projects from '@/pages/Projects';
 import Team from '@/pages/Team';
 import Contact from '@/pages/Contact';
+import Gallery from '@/pages/Gallery';
+import ProjectDetail from '@/pages/ProjectDetail';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -49,6 +51,8 @@ const AuthenticatedApp = () => {
         <Route path="/projects" element={<Projects />} />
         <Route path="/team" element={<Team />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/projects/:slug" element={<ProjectDetail />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>

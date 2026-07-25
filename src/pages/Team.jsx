@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Award, GraduationCap, BadgeCheck, ChevronDown, Linkedin, Download } from 'lucide-react';
+import { Mail, Award, GraduationCap, BadgeCheck, ChevronDown, Linkedin, Download, ArrowRight } from 'lucide-react';
 import { Image } from '@/components/ui/image';
+import { Link } from 'react-router-dom';
 import Reveal from '@/components/animations/Reveal';
+import SEO from '@/components/SEO';
+import { IMG } from '@/data/companyData';
 
 const team = [
   {
@@ -101,6 +104,12 @@ function TeamCard({ member }) {
 export default function Team() {
   return (
     <div>
+      <SEO
+        title="Our Team"
+        description="Meet the multidisciplinary team at County Structures Limited — registered engineers, architects, environmental experts, and business development professionals driving every project."
+        keywords="construction team Kenya, civil engineers, architects, environmental experts, County Structures team, EBK registered engineers"
+        image={IMG.plans}
+      />
       <section className="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden bg-charcoal">
         <div className="absolute inset-0">
           <Image src="https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/db98037dc_generated_5dfc5510.png" alt="Architectural blueprints" fittingType="fill" className="w-full h-full object-cover" />
@@ -118,6 +127,17 @@ export default function Team() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {team.map((m, i) => (<Reveal key={m.name} delay={i * 0.08}><TeamCard member={m} /></Reveal>))}
           </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-primary/5 border-t border-border/40 text-center">
+        <div className="max-w-2xl mx-auto px-6">
+          <h2 className="font-heading text-3xl lg:text-4xl font-bold mb-4">Build With Our Team</h2>
+          <p className="text-muted-foreground mb-8 text-lg">Our multidisciplinary experts are ready to bring your vision to life. Let's discuss your next project.</p>
+          <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-primary text-primary-foreground font-semibold hover:scale-105 transition-all">
+            Start Your Build <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
     </div>
