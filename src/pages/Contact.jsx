@@ -54,7 +54,7 @@ export default function Contact() {
       />
       <section className="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden bg-charcoal">
         <div className="absolute inset-0">
-          <Image src="https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/19bf1f8a6_generated_16dbb96d.png" alt="Construction site" fittingType="fill" className="w-full h-full object-cover" />
+          <Image src={IMG.samarHero} alt="County Structures premium project showcase" fittingType="fill" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/30" />
         </div>
         <div className="relative max-w-9xl mx-auto px-6 pb-12">

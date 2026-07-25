@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, ZoomIn, ExternalLink, ArrowRight } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 import Reveal from '@/components/animations/Reveal';
 import SEO from '@/components/SEO';
-import { galleryImages, IMG } from '@/data/companyData';
+import { galleryImages, IMG, photoAlbums } from '@/data/companyData';
 
 const filters = ['All', 'Commercial', 'Residential', 'Institutional', 'Industrial', 'Construction', 'Design'];
 
@@ -64,7 +64,7 @@ export default function Gallery() {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden bg-charcoal">
         <div className="absolute inset-0">
-          <Image src={IMG.site} alt="Construction gallery" fittingType="fill" className="w-full h-full object-cover" />
+          <Image src={IMG.samarHero} alt="County Structures premium project showcase" fittingType="fill" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/30" />
         </div>
         <div className="relative max-w-9xl mx-auto px-6 pb-12">
@@ -110,6 +110,33 @@ export default function Gallery() {
               ))}
             </AnimatePresence>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Photo Albums */}
+      <section className="py-20 bg-charcoal text-white">
+        <div className="max-w-9xl mx-auto px-6">
+          <Reveal>
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-2 mb-4"><div className="w-8 h-px bg-primary" /><span className="text-xs font-mono uppercase tracking-widest text-primary font-semibold">Full Albums</span><div className="w-8 h-px bg-primary" /></div>
+              <h2 className="font-heading text-3xl lg:text-4xl font-bold tracking-tight">Project Photo Albums</h2>
+              <p className="mt-3 text-white/60 max-w-2xl mx-auto">Explore our full Google Photos albums for detailed construction progress, design renders, and completed project photography.</p>
+            </div>
+          </Reveal>
+          <div className="grid md:grid-cols-3 gap-6">
+            {photoAlbums.map((album, i) => (
+              <Reveal key={album.title} delay={i * 0.1}>
+                <a href={album.url} target="_blank" rel="noopener noreferrer" className="block p-7 rounded-xl glass hover:border-primary/40 border border-white/10 transition-all group h-full">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                    <ExternalLink className="w-6 h-6" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="font-heading text-lg font-bold mb-2 text-white">{album.title}</h3>
+                  <p className="text-sm text-white/60 leading-relaxed mb-4">{album.desc}</p>
+                  <span className="inline-flex items-center gap-2 text-sm text-primary font-semibold">View Album <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></span>
+                </a>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

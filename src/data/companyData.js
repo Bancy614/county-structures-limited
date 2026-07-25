@@ -7,6 +7,10 @@ const IMG = {
   blueprint: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/bd6ba0f94_generated_76eb3e8c.png',
   site: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/19bf1f8a6_generated_16dbb96d.png',
   plans: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/db98037dc_generated_5dfc5510.png',
+  logo: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/5170dae9d_Logo.png',
+  samarHero: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/ad02939aa_SamarHero.png',
+  hallAnimate: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/beb4a7c92_HallAnimate.png',
+  guestHouse: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/e5adfec14_GuestHouse.png',
 };
 
 export { IMG };
@@ -157,8 +161,8 @@ export const projects = [
     service_type: 'New Build',
     location: 'Masii, Machakos',
     client: 'Africa Sand Dam Foundation',
-    image: IMG.building,
-    gallery: [IMG.building, IMG.site, IMG.apartment],
+    image: IMG.hallAnimate,
+    gallery: [IMG.hallAnimate, IMG.guestHouse, IMG.site],
     description: 'A purpose-built office and training hall facility for the Africa Sand Dam Foundation, a non-profit organization supporting community water projects across arid Kenya. The facility includes modern office spaces, a training hall for community workshops, and ancillary facilities designed for functionality and sustainability.',
     challenge: 'The project required careful consideration of the semi-arid climate of Masii, with water conservation and passive cooling being key design drivers. The remote location also presented logistical challenges for material delivery and site management.',
     solution: 'Our team implemented water harvesting systems, passive ventilation strategies, and locally-sourced materials where possible. Construction project management ensured timely delivery of materials and efficient site operations despite the remote location.',
@@ -176,8 +180,8 @@ export const projects = [
     service_type: 'New Build',
     location: 'Machakos Town',
     client: 'Virginia Muteti',
-    image: IMG.apartment,
-    gallery: [IMG.apartment, IMG.building, IMG.site],
+    image: IMG.guestHouse,
+    gallery: [IMG.guestHouse, IMG.samarHero, IMG.apartment],
     description: 'A modern 30-room guest house in Machakos Town, designed to provide comfortable accommodation for business and leisure travelers. The development includes en-suite rooms, a reception area, dining facilities, and ample parking — all designed with contemporary aesthetics and local cultural influences.',
     challenge: 'Maximizing room count on the available plot while maintaining comfortable spacing, natural lighting, and ventilation for each room. The design also needed to address noise control and privacy.',
     solution: 'Our architectural team developed an efficient floor plan that optimizes space utilization while ensuring comfort. Structural design incorporated reinforced concrete for durability, and the project benefits from our integrated design, project management, and construction services.',
@@ -233,8 +237,8 @@ export const projects = [
     service_type: 'Construction',
     location: 'Nairobi',
     client: 'Samar Ltd',
-    image: IMG.apartment,
-    gallery: [IMG.apartment, IMG.building, IMG.site],
+    image: IMG.samarHero,
+    gallery: [IMG.samarHero, IMG.apartment, IMG.building],
     description: 'Samar Towers is a premium residential apartment development in Nairobi, featuring modern units with high-quality finishes. The development includes multiple apartment configurations, communal areas, secure parking, and amenities designed for urban living.',
     challenge: 'The project demanded high-quality construction finishes, strict adherence to Nairobi County building regulations, and minimal disruption to the surrounding residential neighborhood during construction.',
     solution: 'Our construction team implemented rigorous quality control processes, maintained strict compliance with all regulatory requirements, and employed noise and dust mitigation measures. The project was delivered to the client\'s complete satisfaction.',
@@ -304,6 +308,9 @@ export const projects = [
 ];
 
 export const galleryImages = [
+  { url: IMG.hallAnimate, category: 'Construction', title: 'ASDF Training Hall — Construction Progress', project: 'asd-foundation-office', aspect: 'wide' },
+  { url: IMG.guestHouse, category: 'Commercial', title: 'Guest House — Rendering vs Construction', project: 'machakos-guest-house', aspect: 'wide' },
+  { url: IMG.samarHero, category: 'Residential', title: 'Samar Towers — Multi-View Showcase', project: 'samar-towers-apartments', aspect: 'tall' },
   { url: IMG.building, category: 'Commercial', title: 'Africa Sand Dam Foundation Office', project: 'asd-foundation-office', aspect: 'tall' },
   { url: IMG.apartment, category: 'Residential', title: '30-Room Guest House', project: 'machakos-guest-house', aspect: 'wide' },
   { url: IMG.blueprint, category: 'Institutional', title: "Murang'a University Master Plan", project: 'muranga-university-games', aspect: 'tall' },
@@ -319,6 +326,12 @@ export const galleryImages = [
   { url: IMG.plans, category: 'Design', title: 'Structural Drawings', project: '', aspect: 'square' },
   { url: IMG.site, category: 'Construction', title: 'Samar Towers Construction', project: 'samar-towers-apartments', aspect: 'tall' },
   { url: IMG.building, category: 'Commercial', title: 'Guest House Facade', project: 'machakos-guest-house', aspect: 'wide' },
+];
+
+export const photoAlbums = [
+  { title: 'ASDF Office & Training Hall', desc: 'Construction progress photos for the Africa Sand Dam Foundation office and training hall project in Masii, Machakos — from groundbreaking to completion.', url: 'https://photos.app.goo.gl/1sAtAMkoyYLF313MA' },
+  { title: 'Samar Towers, Juja Road', desc: 'Design renders and construction photos for the proposed Samar Towers apartment development on Juja Road, Nairobi.', url: 'https://photos.app.goo.gl/1STD4fPL8Kq7A2bv8' },
+  { title: 'Guest House at Machakos', desc: 'Design renders and construction photos for the proposed hotel and guest house project in Machakos.', url: 'https://photos.app.goo.gl/AwfCbWmMircctHJd7' },
 ];
 
 export const certifications = [

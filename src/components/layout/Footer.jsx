@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import { IMG } from '@/data/companyData';
 
 const quickLinks = [
   { label: 'Home', path: '/' },
@@ -46,15 +47,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company */}
           <div>
-            <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <svg viewBox="0 0 100 100" className="w-7 h-7" fill="none">
-                  <path d="M20 72 L20 28 L34 28 L50 52 L66 28 L80 28 L80 72 L68 72 L68 46 L54 68 L46 68 L32 46 L32 72 Z" fill="#121212" />
-                </svg>
-              </div>
-              <div className="leading-none">
-                <span className="font-heading font-bold text-lg text-white">County Structures</span>
-                <span className="block text-[10px] font-mono tracking-widest uppercase text-white/40 mt-0.5">Development & Construction</span>
+            <div className="mb-5">
+              <div className="bg-white rounded-lg px-2 py-1 inline-block">
+                <img src={IMG.logo} alt="County Structures Limited — Make Your Statement" className="h-10 w-auto" />
               </div>
             </div>
             <p className="text-sm leading-relaxed text-white/50 mb-5">
