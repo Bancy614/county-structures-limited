@@ -3,8 +3,7 @@ import { motion } from 'framer-motion';
 import { ShieldCheck, Building2, Leaf, Award } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 import Reveal from '@/components/animations/Reveal';
-
-const OVERVIEW_IMG = 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/db98037dc_generated_5dfc5510.png';
+import { IMG } from '@/data/companyData';
 
 const pillars = [
   { icon: ShieldCheck, title: 'NCA Registered', desc: 'Registered contractor with the National Construction Authority of Kenya' },
@@ -22,7 +21,7 @@ export default function CompanyOverview() {
           <Reveal>
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl">
-                <Image src={OVERVIEW_IMG} alt="Architectural blueprints on a mahogany table with surveyor tools" fittingType="fill" className="w-full h-full object-cover" />
+                <Image src={IMG.guestHouse} alt="Guest House project — rendering and construction progress by County Structures" fittingType="fill" className="w-full h-full object-cover" />
               </div>
               {/* Floating stat card */}
               <motion.div

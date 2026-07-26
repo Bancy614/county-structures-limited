@@ -44,8 +44,8 @@ const servicesMega = [
 function Logo({ dark }) {
   return (
     <Link to="/" className="flex items-center group">
-      <div className="bg-white rounded-lg px-2 py-1 shadow-lg group-hover:scale-105 transition-transform">
-        <img src={IMG.logo} alt="County Structures Limited — Make Your Statement" className="h-10 w-auto" />
+      <div className="bg-white rounded-lg px-3 py-1.5 shadow-lg group-hover:scale-105 transition-transform">
+        <img src={IMG.logo} alt="County Structures Limited — Make Your Statement" className="h-12 w-auto" />
       </div>
     </Link>
   );
@@ -90,11 +90,13 @@ export default function Navbar() {
       {/* Top utility bar */}
       <div className={`hidden md:block transition-all duration-300 ${scrolled ? 'h-0 opacity-0 overflow-hidden' : 'h-9 opacity-100'} ${dark ? 'bg-black/30 text-white/70' : 'bg-charcoal text-white/70'}`}>
         <div className="max-w-9xl mx-auto px-6 h-9 flex items-center justify-between text-xs font-mono">
-          <div className="flex items-center gap-6">
-            <a href="tel:+254721466368" className="flex items-center gap-2 hover:text-primary transition-colors"><Phone className="w-3 h-3" /> +254 721 466 368</a>
-            <a href="mailto:countystr@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors"><Mail className="w-3 h-3" /> countystr@gmail.com</a>
+          <div className="flex items-center gap-4">
+            <span className="text-primary font-semibold tracking-wide hidden xl:inline">Development Consultancy & Construction Services</span>
+            <span className="w-px h-3 bg-white/20 hidden xl:inline" />
+            <a href="tel:+254721466368" className="flex items-center gap-1.5 hover:text-primary transition-colors"><Phone className="w-3 h-3" /> +254 721 466 368</a>
+            <a href="mailto:countystr@gmail.com" className="flex items-center gap-1.5 hover:text-primary transition-colors"><Mail className="w-3 h-3" /> countystr@gmail.com</a>
           </div>
-          <span>NCA Registered Contractor · Est. 2011 · Machakos & Nairobi, Kenya</span>
+          <span className="hidden lg:inline">NCA Registered Contractor · Est. 2011 · Machakos & Nairobi, Kenya</span>
         </div>
       </div>
 
@@ -104,7 +106,8 @@ export default function Navbar() {
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         className={`transition-all duration-300 ${scrolled ? 'bg-card/95 backdrop-blur-xl shadow-sm border-b border-border/40' : ''}`}
       >
-        <nav className={`max-w-9xl mx-auto px-6 flex items-center justify-between transition-all duration-300 ${scrolled ? 'h-16' : 'h-20'}`}>
+        <nav className={`max-w-9xl mx-auto px-6 flex items-center justify-between transition-all duration-300 ${scrolled ? 'h-18' : 'h-22'}`}>
+          {/* Logo height fits within both h-18 (72px) and h-22 (88px) — logo is 48px + 12px padding = 60px */}
           <div className={dark ? '[&_*]:text-white' : ''}>
             <Logo dark={dark} />
           </div>

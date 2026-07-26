@@ -5,15 +5,14 @@ import { Button } from '@/components/ui/button';
 import { Image } from '@/components/ui/image';
 import { useQuoteModal } from '@/components/QuoteModal';
 import Reveal from '@/components/animations/Reveal';
-
-const CTA_IMG = 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/19bf1f8a6_generated_16dbb96d.png';
+import { IMG } from '@/data/companyData';
 
 export default function FinalCTA() {
   const { openQuote } = useQuoteModal();
   return (
     <section className="relative py-24 lg:py-40 overflow-hidden">
       <div className="absolute inset-0">
-        <Image src={CTA_IMG} alt="Aerial view of a construction site at dawn" fittingType="fill" className="w-full h-full object-cover" />
+        <Image src={IMG.hallAnimate} alt="ASDF Training Hall construction progress by County Structures" fittingType="fill" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/85 to-charcoal/40" />
       </div>
       <div className="absolute inset-0 structural-grid-dark opacity-20" />

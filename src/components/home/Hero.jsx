@@ -17,7 +17,7 @@ const stats = [
 export default function Hero() {
   const { openQuote } = useQuoteModal();
   return (
-    <section className="relative min-h-screen flex items-end overflow-hidden bg-charcoal">
+    <section className="relative min-h-screen flex items-end pt-32 overflow-hidden bg-charcoal">
       {/* Background image with Ken Burns */}
       <div className="absolute inset-0">
         <Image src={IMG.samarHero} alt="Samar Towers — premium residential apartment development by County Structures" fittingType="fill" className="w-full h-full object-cover animate-ken-burns" />
@@ -43,30 +43,30 @@ export default function Hero() {
             Development Consultancy & Construction Services
           </motion.div>
 
-          <h1 className="font-heading font-bold text-white text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight">
+          <h1 className="font-heading font-bold text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight">
             Building Premium<br />
             <span className="text-gradient-gold">Commercial & Residential</span><br />
             Spaces Across Kenya
           </h1>
 
-          <p className="mt-6 text-lg lg:text-xl text-white/70 max-w-2xl leading-relaxed">
+          <p className="mt-5 text-base lg:text-lg text-white/70 max-w-2xl leading-relaxed">
             From structural design to project handover — County Structures Limited delivers excellence in every build, combining engineering precision with architectural vision since 2011.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <Button onClick={openQuote} size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold shadow-xl shadow-primary/20 hover:scale-105 transition-all group">
-              Request a Quote <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <Button onClick={openQuote} size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-base shadow-2xl shadow-primary/40 hover:shadow-primary/60 hover:scale-105 transition-all group h-12 px-8">
+              Request a Quote <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Link to="/projects">
-              <Button variant="outline" size="lg" className="border-white/30 bg-white/5 text-white backdrop-blur hover:bg-white/10 hover:text-white hover:border-white/50">
+              <Button variant="outline" size="lg" className="border-2 border-white/40 bg-white/10 text-white backdrop-blur hover:bg-primary hover:text-primary-foreground hover:border-primary font-semibold h-12 px-8 transition-all">
                 View Projects
               </Button>
             </Link>
-            <button className="flex items-center gap-2 text-white/70 hover:text-white transition-colors group">
-              <span className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white/10 group-hover:border-white/50 transition-all">
+            <button className="flex items-center gap-2 text-white/70 hover:text-primary transition-colors group">
+              <span className="w-11 h-11 rounded-full border-2 border-white/40 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-primary-foreground transition-all">
                 <Play className="w-4 h-4 ml-0.5" />
               </span>
-              <span className="text-sm font-medium">Watch Company Profile</span>
+              <span className="text-sm font-semibold">Watch Company Profile</span>
             </button>
           </div>
         </motion.div>
