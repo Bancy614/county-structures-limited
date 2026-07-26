@@ -14,7 +14,7 @@ import { faqs, IMG } from '@/data/companyData';
 import { base44 } from '@/api/base44Client';
 
 const contactInfo = [
-  { icon: MapPin, label: 'Address', value: '#G1, Hendon Plaza, Machakos Town, Machakos County, Kenya' },
+  { icon: MapPin, label: 'Address', value: '#G1, Hendon Plaza, Machakos Town, Machakos County, Kenya', href: 'https://www.google.com/maps/search/?api=1&query=Hendon+Plaza+Machakos+Town+Kenya' },
   { icon: Phone, label: 'Phone', value: '+254 721 466 368 / +254 721 997 876', href: 'tel:+254721466368' },
   { icon: Mail, label: 'Email', value: 'countystr@gmail.com', href: 'mailto:countystr@gmail.com' },
   { icon: Clock, label: 'Office Hours', value: 'Monday – Friday: 8:00 AM – 5:00 PM' },
@@ -106,7 +106,7 @@ export default function Contact() {
                   <div key={c.label} className="p-5 rounded-xl border border-border/40 bg-card hover:border-primary/40 transition-colors">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-3"><c.icon className="w-5 h-5" /></div>
                     <h3 className="font-heading text-sm font-bold mb-1">{c.label}</h3>
-                    {c.href ? <a href={c.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">{c.value}</a> : <p className="text-sm text-muted-foreground">{c.value}</p>}
+                    {c.href ? <a href={c.href} target={c.href.startsWith('http') ? '_blank' : undefined} rel={c.href.startsWith('http') ? 'noopener noreferrer' : undefined} className="text-sm text-muted-foreground hover-gradient transition-colors">{c.value}</a> : <p className="text-sm text-muted-foreground">{c.value}</p>}
                   </div>
                 ))}
               </div>

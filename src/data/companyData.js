@@ -2,11 +2,11 @@
 // All content sourced from the official company profile document.
 
 const IMG = {
-  building: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/b77b3b2bf_generated_cda1939e.png',
-  apartment: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/a1a965a31_generated_cd84835d.png',
-  blueprint: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/bd6ba0f94_generated_76eb3e8c.png',
-  site: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/19bf1f8a6_generated_16dbb96d.png',
-  plans: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/db98037dc_generated_5dfc5510.png',
+  building: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80',
+  apartment: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=80',
+  blueprint: 'https://images.unsplash.com/photo-1503387762-1571e267bf00?w=1200&q=80',
+  site: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80',
+  plans: 'https://images.unsplash.com/photo-1530124566582-a618bc261531?w=1200&q=80',
   logo: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/5170dae9d_Logo.png',
   samarHero: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/ad02939aa_SamarHero.png',
   hallAnimate: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/beb4a7c92_HallAnimate.png',
@@ -21,6 +21,7 @@ export const companyInfo = {
   established: 2011,
   incorporated: 2015,
   address: '#G1, Hendon Plaza, Machakos Town, Machakos County, Kenya',
+  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Hendon+Plaza+Machakos+Town+Kenya',
   phone1: '+254 721 466 368',
   phone2: '+254 721 997 876',
   email: 'countystr@gmail.com',

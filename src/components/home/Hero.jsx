@@ -7,6 +7,7 @@ import { useQuoteModal } from '@/components/QuoteModal';
 import AnimatedCounter from '@/components/animations/AnimatedCounter';
 import { Image } from '@/components/ui/image';
 import { IMG } from '@/data/companyData';
+import DateTimeWeather from '@/components/home/DateTimeWeather';
 
 const stats = [
   { value: 14, suffix: '+', label: 'Years Experience' },
@@ -38,9 +39,8 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 w-full max-w-9xl mx-auto px-6 pb-24 lg:pb-16">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="max-w-4xl">
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-white/80 text-xs font-mono uppercase tracking-widest mb-6">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Development Consultancy & Construction Services
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
+            <DateTimeWeather />
           </motion.div>
 
           <h1 className="font-heading font-bold text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight">

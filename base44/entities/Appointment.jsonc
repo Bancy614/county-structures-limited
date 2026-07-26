@@ -1,0 +1,54 @@
+{
+  "name": "Appointment",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "service_type": {
+      "type": "string"
+    },
+    "preferred_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "preferred_time": {
+      "type": "string",
+      "enum": [
+        "08:00",
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00",
+        "14:00",
+        "15:00",
+        "16:00"
+      ],
+      "default": "09:00"
+    },
+    "message": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Pending",
+        "Confirmed",
+        "Completed",
+        "Cancelled"
+      ],
+      "default": "Pending"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "preferred_date"
+  ]
+}

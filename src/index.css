@@ -10,8 +10,8 @@
     --card-foreground: 18 18 18;
     --popover: 255 255 255;
     --popover-foreground: 18 18 18;
-    --primary: 255 184 0;
-    --primary-foreground: 18 18 18;
+    --primary: 59 81 229;
+    --primary-foreground: 0 0 0;
     --secondary: 244 245 247;
     --secondary-foreground: 18 18 18;
     --muted: 244 245 247;
@@ -22,7 +22,7 @@
     --destructive-foreground: 255 255 255;
     --border: 230 231 233;
     --input: 230 231 233;
-    --ring: 255 184 0;
+    --ring: 59 81 229;
     --charcoal: 18 18 18;
     --steel: 43 76 126;
     --gold: 255 184 0;
@@ -41,8 +41,8 @@
     --card-foreground: 248 249 250;
     --popover: 28 28 28;
     --popover-foreground: 248 249 250;
-    --primary: 255 184 0;
-    --primary-foreground: 18 18 18;
+    --primary: 59 81 229;
+    --primary-foreground: 0 0 0;
     --secondary: 34 34 34;
     --secondary-foreground: 248 249 250;
     --muted: 34 34 34;
@@ -53,7 +53,7 @@
     --destructive-foreground: 255 255 255;
     --border: 42 42 42;
     --input: 42 42 42;
-    --ring: 255 184 0;
+    --ring: 59 81 229;
   }
 }
 
@@ -141,6 +141,22 @@
     background: linear-gradient(90deg, hsl(var(--muted)) 25%, hsl(var(--muted)/0.5) 50%, hsl(var(--muted)) 75%);
     background-size: 200% 100%;
     animation: shimmer 1.5s infinite;
+  }
+
+  /* Gradient hover effect — repeating-radial-gradient of #de1c59, #ebb02e, #ff6a00 */
+  .hover-gradient:hover {
+    background-image: repeating-radial-gradient(circle, #de1c59, #ebb02e, #ff6a00) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+    transition: all 0.3s ease;
+  }
+
+  .hover-gradient-bg:hover {
+    background-image: repeating-radial-gradient(circle, #de1c59, #ebb02e, #ff6a00) !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease;
   }
 
   /* Scrollbar */

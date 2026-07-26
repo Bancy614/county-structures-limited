@@ -119,7 +119,7 @@ export default function Navbar() {
                 <div key={link.label} className="relative" onMouseEnter={() => setMegaOpen(true)} onMouseLeave={() => setMegaOpen(false)}>
                   <Link
                     to={link.path}
-                    className={`flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-md transition-colors ${dark ? 'text-white/80 hover:text-white' : 'text-foreground/70 hover:text-foreground'}`}
+                    className={`flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-md transition-colors hover-gradient ${dark ? 'text-white/80' : 'text-foreground/70'}`}
                   >
                     {link.label}
                     <ChevronDown className={`w-3.5 h-3.5 transition-transform ${megaOpen ? 'rotate-180' : ''}`} />
@@ -158,7 +158,7 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   to={link.path}
-                  className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${dark ? 'text-white/80 hover:text-white' : 'text-foreground/70 hover:text-foreground'} ${location.pathname === link.path ? (dark ? 'text-white' : 'text-foreground') : ''}`}
+                  className={`px-4 py-2 text-sm font-medium rounded-md transition-colors hover-gradient ${dark ? 'text-white/80' : 'text-foreground/70'} ${location.pathname === link.path ? (dark ? 'text-white' : 'text-foreground') : ''}`}
                 >
                   {link.label}
                 </Link>
@@ -217,7 +217,7 @@ export default function Navbar() {
                   <Link
                     key={link.label}
                     to={link.path}
-                    className="block py-3 text-lg font-heading font-medium border-b border-border/20 hover:text-primary transition-colors"
+                    className="block py-3 text-lg font-heading font-medium border-b border-border/20 hover-gradient transition-colors"
                   >
                     {link.label}
                   </Link>

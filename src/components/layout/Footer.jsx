@@ -70,7 +70,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.path}>
-                  <Link to={link.path} className="text-sm hover:text-primary transition-colors flex items-center gap-2 group">
+                  <Link to={link.path} className="text-sm hover-gradient transition-colors flex items-center gap-2 group">
                     <span className="w-0 h-px bg-primary group-hover:w-4 transition-all" />
                     {link.label}
                   </Link>
@@ -85,7 +85,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {services.map((s) => (
                 <li key={s}>
-                  <Link to="/services" className="text-sm hover:text-primary transition-colors">{s}</Link>
+                  <Link to="/services" className="text-sm hover-gradient transition-colors">{s}</Link>
                 </li>
               ))}
             </ul>
@@ -97,7 +97,7 @@ export default function Footer() {
             <ul className="space-y-3.5 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                <span className="text-white/60">#G1, Hendon Plaza, Machakos Town, Machakos County, Kenya</span>
+                <a href="https://www.google.com/maps/search/?api=1&query=Hendon+Plaza+Machakos+Town+Kenya" target="_blank" rel="noopener noreferrer" className="text-white/60 hover-gradient transition-colors">#G1, Hendon Plaza, Machakos Town, Machakos County, Kenya</a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary shrink-0" />
