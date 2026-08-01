@@ -22,7 +22,7 @@ const WEATHER_CODES = {
   82: { label: 'Violent rain', icon: CloudRain },
   95: { label: 'Thunderstorm', icon: CloudLightning },
   96: { label: 'Thunderstorm', icon: CloudLightning },
-  99: { label: 'Thunderstorm', icon: CloudLightning },
+  99: { label: 'Thunderstorm', icon: CloudLightning }
 };
 
 export default function DateTimeWeather() {
@@ -35,10 +35,10 @@ export default function DateTimeWeather() {
   }, []);
 
   useEffect(() => {
-    fetch('https://api.open-meteo.com/v1/forecast?latitude=-1.5167&longitude=37.2667&current_weather=true')
-      .then((res) => res.json())
-      .then((data) => setWeather(data.current_weather))
-      .catch(() => {});
+    fetch('https://api.open-meteo.com/v1/forecast?latitude=-1.5167&longitude=37.2667&current_weather=true').
+    then((res) => res.json()).
+    then((data) => setWeather(data.current_weather)).
+    catch(() => {});
   }, []);
 
   const dateStr = now.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
@@ -49,19 +49,19 @@ export default function DateTimeWeather() {
 
   return (
     <div className="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-1.5 rounded-full glass text-white/80 text-[10px] sm:text-xs font-mono uppercase tracking-widest mb-6 flex-wrap">
-      <span className="w-2 h-2 rounded-full bg-primary animate-pulse shrink-0" />
+      <span className="w-2 h-2 rounded-full bg-primary animate-pulse shrink-0 hidden" />
       <span>{dateStr}</span>
       <span className="w-px h-3 bg-white/20" />
       <span className="tabular-nums">{timeStr}</span>
-      {weather && WeatherIcon && (
-        <>
+      {weather && WeatherIcon &&
+      <>
           <span className="w-px h-3 bg-white/20" />
           <WeatherIcon className="w-3.5 h-3.5 shrink-0" />
           <span>{Math.round(weather.temperature)}°C {weatherInfo.label}</span>
         </>
-      )}
+      }
       <span className="w-px h-3 bg-white/20 hidden sm:inline" />
       <span className="hidden sm:inline-flex items-center gap-1"><MapPin className="w-3 h-3" /> Machakos</span>
-    </div>
-  );
+    </div>);
+
 }
