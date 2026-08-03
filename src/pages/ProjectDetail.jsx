@@ -32,8 +32,8 @@ export default function ProjectDetail() {
             </Button>
           </Link>
         </div>
-      </div>
-    );
+      </div>);
+
   }
 
   const currentIndex = projects.findIndex((p) => p.slug === slug);
@@ -41,13 +41,13 @@ export default function ProjectDetail() {
   const prevProject = projects[(currentIndex - 1 + projects.length) % projects.length];
 
   const metaItems = [
-    { icon: Building2, label: 'Client', value: project.client },
-    { icon: MapPin, label: 'Location', value: project.location },
-    { icon: CheckCircle2, label: 'Status', value: project.status },
-    { icon: Ruler, label: 'Category', value: project.category },
-    { icon: Clock, label: 'Duration', value: project.duration },
-    { icon: Wallet, label: 'Budget', value: project.budget },
-  ];
+  { icon: Building2, label: 'Client', value: project.client },
+  { icon: MapPin, label: 'Location', value: project.location },
+  { icon: CheckCircle2, label: 'Status', value: project.status },
+  { icon: Ruler, label: 'Category', value: project.category },
+  { icon: Clock, label: 'Duration', value: project.duration },
+  { icon: Wallet, label: 'Budget', value: project.budget }];
+
 
   return (
     <div>
@@ -56,8 +56,8 @@ export default function ProjectDetail() {
         description={project.description}
         keywords={`${project.title}, ${project.category}, ${project.location}, construction project Kenya, County Structures`}
         image={project.image}
-        type="article"
-      />
+        type="article" />
+      
 
       {/* Breadcrumb */}
       <div className="bg-secondary/50 border-b border-border/40">
@@ -104,8 +104,8 @@ export default function ProjectDetail() {
               </div>
             </Reveal>
 
-            {project.challenge && (
-              <Reveal>
+            {project.challenge &&
+            <Reveal>
                 <div className="p-8 rounded-2xl bg-secondary/30 border border-border/40">
                   <h3 className="font-heading text-xl font-bold mb-4 flex items-center gap-2">
                     <span className="w-8 h-8 rounded-lg bg-destructive/10 text-destructive flex items-center justify-center"><AlertTriangle className="w-4 h-4" /></span>
@@ -114,10 +114,10 @@ export default function ProjectDetail() {
                   <p className="text-muted-foreground leading-relaxed">{project.challenge}</p>
                 </div>
               </Reveal>
-            )}
+            }
 
-            {project.solution && (
-              <Reveal>
+            {project.solution &&
+            <Reveal>
                 <div className="p-8 rounded-2xl bg-secondary/30 border border-border/40">
                   <h3 className="font-heading text-xl font-bold mb-4 flex items-center gap-2">
                     <span className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center"><CheckCircle2 className="w-4 h-4" /></span>
@@ -126,46 +126,46 @@ export default function ProjectDetail() {
                   <p className="text-muted-foreground leading-relaxed">{project.solution}</p>
                 </div>
               </Reveal>
-            )}
+            }
 
-            {project.services_used && project.services_used.length > 0 && (
-              <Reveal>
+            {project.services_used && project.services_used.length > 0 &&
+            <Reveal>
                 <div>
                   <div className="flex items-center gap-2 mb-4">
                     <div className="w-8 h-px bg-primary" />
                     <span className="text-xs font-mono uppercase tracking-widest text-primary font-semibold">Services Provided</span>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {project.services_used.map((s) => (
-                      <span key={s} className="px-4 py-2 rounded-full bg-card border border-border/40 text-sm font-medium hover:border-primary/40 transition-colors">{s}</span>
-                    ))}
+                    {project.services_used.map((s) =>
+                  <span key={s} className="px-4 py-2 rounded-full bg-card border border-border/40 text-sm font-medium hover:border-primary/40 transition-colors">{s}</span>
+                  )}
                   </div>
                 </div>
               </Reveal>
-            )}
+            }
 
             {/* Gallery */}
-            {project.gallery && project.gallery.length > 0 && (
-              <Reveal>
+            {project.gallery && project.gallery.length > 0 &&
+            <Reveal>
                 <div>
                   <div className="flex items-center gap-2 mb-4">
                     <div className="w-8 h-px bg-primary" />
                     <span className="text-xs font-mono uppercase tracking-widest text-primary font-semibold">Project Gallery</span>
                   </div>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                    {project.gallery.map((img, i) => (
-                      <button
-                        key={i}
-                        onClick={() => setActiveImage(i)}
-                        className={`relative rounded-lg overflow-hidden aspect-square group ${activeImage === i ? 'ring-2 ring-primary' : ''}`}
-                      >
-                        <Image src={img} alt={`${project.title} — image ${i + 1}`} fittingType="fill" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    {project.gallery.map((img, i) =>
+                  <button
+                    key={i}
+                    onClick={() => setActiveImage(i)}
+                    className={`relative rounded-lg overflow-hidden aspect-square group ${activeImage === i ? 'ring-2 ring-primary' : ''}`}>
+                    
+                        <Image src="https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/47e9f471d_Samar_2.jpg" alt={`${project.title} — image ${i + 1}`} fittingType="fill" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                       </button>
-                    ))}
+                  )}
                   </div>
                 </div>
               </Reveal>
-            )}
+            }
           </div>
 
           {/* Sidebar */}
@@ -175,8 +175,8 @@ export default function ProjectDetail() {
                 <div>
                   <h3 className="font-heading text-lg font-bold mb-5">Project Details</h3>
                   <div className="space-y-4">
-                    {metaItems.map((m) => (
-                      <div key={m.label} className="flex items-start gap-3">
+                    {metaItems.map((m) =>
+                    <div key={m.label} className="flex items-start gap-3">
                         <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
                           <m.icon className="w-4 h-4" />
                         </div>
@@ -185,16 +185,16 @@ export default function ProjectDetail() {
                           <p className="text-sm font-medium">{m.value}</p>
                         </div>
                       </div>
-                    ))}
+                    )}
                   </div>
                 </div>
 
-                {project.area && (
-                  <div className="pt-4 border-t border-border/40">
+                {project.area &&
+                <div className="pt-4 border-t border-border/40">
                     <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">Floor Area</p>
                     <p className="text-2xl font-heading font-bold text-primary">{project.area}</p>
                   </div>
-                )}
+                }
 
                 <Button onClick={openQuote} className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold gap-2">
                   Start a Similar Project <ArrowRight className="w-4 h-4" />
@@ -218,6 +218,6 @@ export default function ProjectDetail() {
           </Link>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 }
