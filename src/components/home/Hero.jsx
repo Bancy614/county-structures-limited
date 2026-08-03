@@ -39,7 +39,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 w-full max-w-9xl mx-auto px-6 pb-24 lg:pb-16">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="max-w-4xl">
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>COUNTY STRUCTURES
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="text-5xl lg:text-5xl xl:text-5xl">COUNTY STRUCTURES
 
 Building Premium
 Commercial & Residential
