@@ -47,8 +47,8 @@ export default function Hero() {
 
           <h2 className="font-heading text-xl sm:text-2xl lg:text-3xl text-gold font-semibold leading-snug mt-2 mb-2 drop-shadow-lg">Building Premium Commercial & Residential Spaces Across Kenya.</h2>
 
-          <p className="mt-5 text-base lg:text-lg text-white/70 max-w-2xl leading-relaxed">
-            From structural design to project handover — County Structures Limited delivers excellence in every build, combining engineering precision with architectural vision since 2011.
+          <p className="mt-5 text-base lg:text-lg text-white/70 max-w-2xl leading-relaxed">From structural design to project handover — County Structures  delivers excellence in every build, combining engineering precision with architectural vision since 2011.
+
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
