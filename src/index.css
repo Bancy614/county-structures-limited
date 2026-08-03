@@ -10,8 +10,8 @@
     --card-foreground: 18 18 18;
     --popover: 255 255 255;
     --popover-foreground: 18 18 18;
-    --primary: 59 81 229;
-    --primary-foreground: 0 0 0;
+    --primary: 26 40 59;
+    --primary-foreground: 248 249 250;
     --secondary: 244 245 247;
     --secondary-foreground: 18 18 18;
     --muted: 244 245 247;
@@ -22,10 +22,10 @@
     --destructive-foreground: 255 255 255;
     --border: 230 231 233;
     --input: 230 231 233;
-    --ring: 59 81 229;
+    --ring: 26 40 59;
     --charcoal: 18 18 18;
-    --steel: 43 76 126;
-    --gold: 255 184 0;
+    --steel: 26 40 59;
+    --gold: 248 216 73;
     --orange: 255 87 34;
     --radius: 0.5rem;
     --font-heading: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
@@ -41,8 +41,8 @@
     --card-foreground: 248 249 250;
     --popover: 28 28 28;
     --popover-foreground: 248 249 250;
-    --primary: 59 81 229;
-    --primary-foreground: 0 0 0;
+    --primary: 26 40 59;
+    --primary-foreground: 248 249 250;
     --secondary: 34 34 34;
     --secondary-foreground: 248 249 250;
     --muted: 34 34 34;
@@ -53,7 +53,7 @@
     --destructive-foreground: 255 255 255;
     --border: 42 42 42;
     --input: 42 42 42;
-    --ring: 59 81 229;
+    --ring: 26 40 59;
   }
 }
 

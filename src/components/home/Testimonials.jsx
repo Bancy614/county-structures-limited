@@ -22,6 +22,12 @@ const testimonials = [
     title: 'Client — Samar Towers',
     project: 'Nairobi',
   },
+  {
+    quote: "Very good work so far.",
+    name: 'Dr. David Kitavi',
+    title: 'County Director Technical Training',
+    project: 'Machakos County Government',
+  },
 ];
 
 export default function Testimonials() {

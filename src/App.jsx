@@ -16,6 +16,7 @@ import Team from '@/pages/Team';
 import Contact from '@/pages/Contact';
 import Gallery from '@/pages/Gallery';
 import ProjectDetail from '@/pages/ProjectDetail';
+import OHSPolicy from '@/pages/OHSPolicy';
 import Admin from '@/pages/Admin';
 import BookAppointment from '@/pages/BookAppointment';
 import Login from '@/pages/Login';
@@ -64,6 +65,7 @@ const AuthenticatedApp = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/projects/:slug" element={<ProjectDetail />} />
+        <Route path="/ohs-policy" element={<OHSPolicy />} />
         <Route path="/book-appointment" element={<BookAppointment />} />
       </Route>
       <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login" replace />} />}>

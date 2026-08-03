@@ -173,6 +173,9 @@ export default function About() {
                 <div key={item} className="flex items-center gap-3 text-sm text-white/80"><ShieldCheck className="w-5 h-5 text-primary shrink-0" /> {item}</div>
               ))}
             </div>
+            <Link to="/ohs-policy" className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:scale-105 transition-all">
+              Read Full OH&S Policy <ArrowRight className="w-4 h-4" />
+            </Link>
           </Reveal>
         </div>
       </section>

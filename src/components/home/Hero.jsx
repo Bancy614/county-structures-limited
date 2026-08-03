@@ -18,7 +18,7 @@ const stats = [
 export default function Hero() {
   const { openQuote } = useQuoteModal();
   return (
-    <section className="relative min-h-screen flex items-end pt-32 overflow-hidden bg-charcoal">
+    <section className="relative min-h-screen flex items-end pt-24 overflow-hidden bg-charcoal">
       {/* Background image with Ken Burns */}
       <div className="absolute inset-0">
         <Image src={IMG.samarHero} alt="Samar Towers — premium residential apartment development by County Structures" fittingType="fill" className="w-full h-full object-cover animate-ken-burns" />
@@ -39,17 +39,13 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 w-full max-w-9xl mx-auto px-6 pb-24 lg:pb-16">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="max-w-4xl">
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="text-5xl lg:text-5xl xl:text-5xl">COUNTY STRUCTURES
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
+            <DateTimeWeather />
+          </motion.div>
 
-Building Premium
-Commercial & Residential
-Spaces Across Kenya</motion.div>
+          <h1 className="font-heading font-black text-white text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.0] tracking-tight drop-shadow-2xl py-2">COUNTY STRUCTURES</h1>
 
-          <h1 className="font-heading font-bold text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight">COUNTY STRUCTURES
-
-
-
-          </h1>
+          <h2 className="font-heading text-xl sm:text-2xl lg:text-3xl text-gold font-semibold leading-snug mt-2 mb-2 drop-shadow-lg">Building Premium Commercial & Residential Spaces Across Kenya.</h2>
 
           <p className="mt-5 text-base lg:text-lg text-white/70 max-w-2xl leading-relaxed">
             From structural design to project handover — County Structures Limited delivers excellence in every build, combining engineering precision with architectural vision since 2011.
