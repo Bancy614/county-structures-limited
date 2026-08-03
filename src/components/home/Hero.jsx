@@ -39,11 +39,16 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 w-full max-w-9xl mx-auto px-6 pb-24 lg:pb-16">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="max-w-4xl">
-          <h1 className="font-heading font-bold text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight py-2 mb-4 drop-shadow-2xl">COUNTY STRUCTURES</h1>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>COUNTY STRUCTURES
+Building Premium
+Commercial & Residential
+Spaces Across Kenya</motion.div>
 
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="mb-2">
-            <DateTimeWeather />
-          </motion.div>
+          <h1 className="font-heading font-bold text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight">COUNTY STRUCTURES
+
+
+
+          </h1>
 
           <p className="mt-5 text-base lg:text-lg text-white/70 max-w-2xl leading-relaxed">
             From structural design to project handover — County Structures Limited delivers excellence in every build, combining engineering precision with architectural vision since 2011.
@@ -69,8 +74,7 @@ export default function Hero() {
 
         {/* Live stats bar */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8, duration: 0.6 }} className="mt-16 flex flex-wrap gap-8 lg:gap-16 pt-8 border-t border-white/10">
-          {stats.map((s) =>
-          <div key={s.label}>
+          {stats.map((s) => <div key={s.label}>
               <div className="font-heading text-3xl lg:text-4xl font-bold text-white">
                 <AnimatedCounter value={s.value} suffix={s.suffix} />
               </div>
