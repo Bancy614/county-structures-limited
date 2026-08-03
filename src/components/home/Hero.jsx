@@ -10,10 +10,10 @@ import { IMG } from '@/data/companyData';
 import DateTimeWeather from '@/components/home/DateTimeWeather';
 
 const stats = [
-  { value: 14, suffix: '+', label: 'Years Experience' },
-  { value: 50, suffix: '+', label: 'Projects Delivered' },
-  { value: 450, suffix: 'K+', label: 'Safety Hours' },
-];
+{ value: 14, suffix: '+', label: 'Years Experience' },
+{ value: 50, suffix: '+', label: 'Projects Delivered' },
+{ value: 450, suffix: 'K+', label: 'Safety Hours' }];
+
 
 export default function Hero() {
   const { openQuote } = useQuoteModal();
@@ -31,9 +31,9 @@ export default function Hero() {
 
       {/* Animated vertical lines */}
       <div className="absolute inset-0 flex justify-between px-[5%] opacity-20">
-        {[0, 1, 2, 3, 4].map((i) => (
-          <motion.div key={i} initial={{ scaleY: 0 }} animate={{ scaleY: 1 }} transition={{ duration: 1.5, delay: i * 0.2, ease: 'easeOut' }} className="w-px bg-gradient-to-b from-transparent via-primary/30 to-transparent origin-top" />
-        ))}
+        {[0, 1, 2, 3, 4].map((i) =>
+        <motion.div key={i} initial={{ scaleY: 0 }} animate={{ scaleY: 1 }} transition={{ duration: 1.5, delay: i * 0.2, ease: 'easeOut' }} className="w-px bg-gradient-to-b from-transparent via-primary/30 to-transparent origin-top" />
+        )}
       </div>
 
       {/* Content */}
@@ -43,10 +43,10 @@ export default function Hero() {
             <DateTimeWeather />
           </motion.div>
 
-          <h1 className="font-heading font-bold text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight">
-            Building Premium<br />
-            <span className="text-gradient-gold">Commercial & Residential</span><br />
-            Spaces Across Kenya
+          <h1 className="font-heading font-bold text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight">COUNTY S
+Building Premium
+Commercial & Residential
+Spaces Across Kenya
           </h1>
 
           <p className="mt-5 text-base lg:text-lg text-white/70 max-w-2xl leading-relaxed">
@@ -73,14 +73,14 @@ export default function Hero() {
 
         {/* Live stats bar */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8, duration: 0.6 }} className="mt-16 flex flex-wrap gap-8 lg:gap-16 pt-8 border-t border-white/10">
-          {stats.map((s) => (
-            <div key={s.label}>
+          {stats.map((s) =>
+          <div key={s.label}>
               <div className="font-heading text-3xl lg:text-4xl font-bold text-white">
                 <AnimatedCounter value={s.value} suffix={s.suffix} />
               </div>
               <div className="text-xs font-mono uppercase tracking-widest text-white/50 mt-1">{s.label}</div>
             </div>
-          ))}
+          )}
         </motion.div>
       </div>
 
@@ -91,6 +91,6 @@ export default function Hero() {
           <ChevronDown className="w-5 h-5" />
         </motion.div>
       </motion.div>
-    </section>
-  );
+    </section>);
+
 }
