@@ -40,6 +40,7 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-9xl mx-auto px-6 pb-24 lg:pb-16">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="max-w-4xl">
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>COUNTY STRUCTURES
+
 Building Premium
 Commercial & Residential
 Spaces Across Kenya</motion.div>
@@ -79,8 +80,7 @@ Spaces Across Kenya</motion.div>
                 <AnimatedCounter value={s.value} suffix={s.suffix} />
               </div>
               <div className="text-xs font-mono uppercase tracking-widest text-white/50 mt-1">{s.label}</div>
-            </div>
-          )}
+            </div>)}
         </motion.div>
       </div>
 
