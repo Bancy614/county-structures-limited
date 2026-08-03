@@ -119,9 +119,7 @@ export default function Footer() {
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/40">© {year} County Structures Limited. All rights reserved. NCA Registered Contractor.</p>
           <div className="flex items-center gap-6 text-xs text-white/40">
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-primary transition-colors">OH&S Policy</a>
+            <Link to="/ohs-policy" className="hover:text-primary transition-colors">OH&S Policy</Link>
           </div>
         </div>
       </div>

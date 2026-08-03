@@ -45,7 +45,7 @@ function Logo({ dark }) {
   return (
     <Link to="/" className="flex items-center group">
       <div className="bg-white rounded-lg px-3 py-1.5 shadow-lg group-hover:scale-105 transition-transform">
-        <img src="https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/ae88c632b_logo2.png" alt="County Structures Limited — Make Your Statement" className="h-12 w-auto" />
+        <img src={IMG.logo} alt="County Structures Limited — Make Your Statement" className="h-12 w-auto" />
       </div>
     </Link>);
 
