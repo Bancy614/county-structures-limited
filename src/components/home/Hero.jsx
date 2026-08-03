@@ -44,9 +44,9 @@ export default function Hero() {
           </motion.div>
 
           <h1 className="font-heading font-bold text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight">COUNTY STRUCTURES
-Building Premium
-Commercial & Residential
-Spaces Across Kenya
+
+
+
           </h1>
 
           <p className="mt-5 text-base lg:text-lg text-white/70 max-w-2xl leading-relaxed">
