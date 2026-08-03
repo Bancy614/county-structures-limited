@@ -61,10 +61,10 @@ export default function Hero() {
               </Button>
             </Link>
             <button className="flex items-center gap-2 text-white/70 hover:text-primary transition-colors group">
-              <span className="w-11 h-11 rounded-full border-2 border-white/40 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-primary-foreground transition-all hidden">
-                <Play className="w-4 h-4 ml-0.5 hidden" />
-              </span>
-              <span className="text-sm font-semibold hidden">Watch Company Profile</span>
+              
+
+              
+              
             </button>
           </div>
         </motion.div>
