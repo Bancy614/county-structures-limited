@@ -97,7 +97,7 @@ export default function Gallery() {
                 className={`group relative rounded-xl overflow-hidden shadow-lg cursor-pointer ${aspectClass(g.aspect)}`}
                 onClick={() => setLightbox(g)}>
                 
-                  <Image src="https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/e5adfec14_GuestHouse.png" alt={g.title} fittingType="fill" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" />
+                  <Image src="https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/e5adfec14_GuestHouse.png" alt={g.title} fittingType="fill" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500 hidden" />
                   
                   <div className="absolute bottom-0 left-0 right-0 p-4">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-primary font-semibold">{g.category}</span>
