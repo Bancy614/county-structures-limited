@@ -58,8 +58,8 @@ export default function Gallery() {
         title="Gallery"
         description="Explore our project gallery — commercial, residential, institutional, and industrial construction projects across Kenya by County Structures Limited."
         keywords="construction gallery Kenya, project portfolio, building photos, construction images, County Structures projects"
-        image={IMG.site}
-      />
+        image={IMG.site} />
+      
 
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden bg-charcoal">
@@ -78,27 +78,27 @@ export default function Gallery() {
         <div className="max-w-9xl mx-auto px-6">
           <Reveal>
             <div className="flex flex-wrap gap-2 mb-10">
-              {filters.map((f) => (
-                <button key={f} onClick={() => setActive(f)} className={`px-5 py-2.5 text-sm font-medium rounded-full transition-all ${active === f ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/20' : 'bg-card border border-border/40 hover:border-primary/40'}`}>{f}</button>
-              ))}
+              {filters.map((f) =>
+              <button key={f} onClick={() => setActive(f)} className={`px-5 py-2.5 text-sm font-medium rounded-full transition-all ${active === f ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/20' : 'bg-card border border-border/40 hover:border-primary/40'}`}>{f}</button>
+              )}
             </div>
           </Reveal>
 
           <motion.div layout className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 auto-rows-auto gap-4">
             <AnimatePresence mode="popLayout">
-              {filtered.map((g, i) => (
-                <motion.div
-                  key={g.title}
-                  layout
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.4, delay: i * 0.04 }}
-                  className={`group relative rounded-xl overflow-hidden shadow-lg cursor-pointer ${aspectClass(g.aspect)}`}
-                  onClick={() => setLightbox(g)}
-                >
+              {filtered.map((g, i) =>
+              <motion.div
+                key={g.title}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.4, delay: i * 0.04 }}
+                className={`group relative rounded-xl overflow-hidden shadow-lg cursor-pointer ${aspectClass(g.aspect)}`}
+                onClick={() => setLightbox(g)}>
+                
                   <Image src={g.url} alt={g.title} fittingType="fill" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity hidden" />
                   <div className="absolute bottom-0 left-0 right-0 p-4">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-primary font-semibold">{g.category}</span>
                     <h3 className="font-heading text-sm font-bold text-white leading-tight mt-1">{g.title}</h3>
@@ -107,7 +107,7 @@ export default function Gallery() {
                     <ZoomIn className="w-4 h-4 text-white" />
                   </div>
                 </motion.div>
-              ))}
+              )}
             </AnimatePresence>
           </motion.div>
         </div>
@@ -124,8 +124,8 @@ export default function Gallery() {
             </div>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-6">
-            {photoAlbums.map((album, i) => (
-              <Reveal key={album.title} delay={i * 0.1}>
+            {photoAlbums.map((album, i) =>
+            <Reveal key={album.title} delay={i * 0.1}>
                 <a href={album.url} target="_blank" rel="noopener noreferrer" className="block p-7 rounded-xl glass hover:border-primary/40 border border-white/10 transition-all group h-full">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                     <ExternalLink className="w-6 h-6" strokeWidth={1.5} />
@@ -135,39 +135,39 @@ export default function Gallery() {
                   <span className="inline-flex items-center gap-2 text-sm text-primary font-semibold">View Album <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></span>
                 </a>
               </Reveal>
-            ))}
+            )}
           </div>
         </div>
       </section>
 
       {/* Lightbox */}
       <AnimatePresence>
-        {lightbox && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center"
-            onClick={closeLightbox}
-          >
+        {lightbox &&
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center"
+          onClick={closeLightbox}>
+          
             <button onClick={closeLightbox} className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white z-10 transition-colors" aria-label="Close">
               <X className="w-6 h-6" />
             </button>
-            <button onClick={(e) => { e.stopPropagation(); prevImage(); }} className="absolute left-4 md:left-8 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white z-10 transition-colors" aria-label="Previous">
+            <button onClick={(e) => {e.stopPropagation();prevImage();}} className="absolute left-4 md:left-8 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white z-10 transition-colors" aria-label="Previous">
               <ChevronLeft className="w-6 h-6" />
             </button>
-            <button onClick={(e) => { e.stopPropagation(); nextImage(); }} className="absolute right-4 md:right-8 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white z-10 transition-colors" aria-label="Next">
+            <button onClick={(e) => {e.stopPropagation();nextImage();}} className="absolute right-4 md:right-8 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white z-10 transition-colors" aria-label="Next">
               <ChevronRight className="w-6 h-6" />
             </button>
             <motion.div
-              key={lightbox.title}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
-              className="max-w-5xl w-full mx-4"
-              onClick={(e) => e.stopPropagation()}
-            >
+            key={lightbox.title}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.3 }}
+            className="max-w-5xl w-full mx-4"
+            onClick={(e) => e.stopPropagation()}>
+            
               <img src={lightbox.url} alt={lightbox.title} className="w-full h-auto max-h-[80vh] object-contain rounded-lg" />
               <div className="text-center mt-4">
                 <span className="text-xs font-mono uppercase tracking-widest text-primary font-semibold">{lightbox.category}</span>
@@ -175,8 +175,8 @@ export default function Gallery() {
               </div>
             </motion.div>
           </motion.div>
-        )}
+        }
       </AnimatePresence>
-    </div>
-  );
+    </div>);
+
 }
