@@ -60,7 +60,7 @@ export default function ProjectDetail() {
       
 
       {/* Breadcrumb */}
-      <div className="bg-secondary/50 border-b border-border/40">
+      <div className="bg-secondary/50 border-b border-border/40 pt-28 md:pt-36">
         <div className="max-w-9xl mx-auto px-6 py-4 flex items-center gap-2 text-sm text-muted-foreground">
           <Link to="/" className="hover:text-primary transition-colors">Home</Link>
           <span>/</span>
@@ -145,7 +145,7 @@ export default function ProjectDetail() {
             }
 
             {/* Gallery */}
-            {project.gallery && project.gallery.length > 0 &&
+            {project.gallery && project.gallery.filter(img => img !== project.image).length > 0 &&
             <Reveal>
                 <div>
                   <div className="flex items-center gap-2 mb-4">
@@ -153,13 +153,13 @@ export default function ProjectDetail() {
                     <span className="text-xs font-mono uppercase tracking-widest text-primary font-semibold">Project Gallery</span>
                   </div>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                    {project.gallery.map((img, i) =>
+                    {project.gallery.filter(img => img !== project.image).map((img, i) =>
                   <button
                     key={i}
                     onClick={() => setActiveImage(i)}
                     className={`relative rounded-lg overflow-hidden aspect-square group ${activeImage === i ? 'ring-2 ring-primary' : ''}`}>
                     
-                        <Image src="https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/ad02939aa_SamarHero.png" alt={`${project.title} — image ${i + 1}`} fittingType="fill" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                        <Image src={img} alt={`${project.title} — image ${i + 1}`} fittingType="fill" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                       </button>
                   )}
                   </div>
