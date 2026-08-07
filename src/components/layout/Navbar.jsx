@@ -91,7 +91,9 @@ export default function Navbar() {
       <div className={`hidden md:block transition-all duration-300 ${scrolled ? 'h-0 opacity-0 overflow-hidden' : 'h-9 opacity-100'} ${dark ? 'bg-black/30 text-white/70' : 'bg-charcoal text-white/70'}`}>
         <div className="max-w-9xl mx-auto px-6 h-9 flex items-center justify-between text-xs font-mono">
           <div className="flex items-center gap-4">
-            <span className="text-primary font-semibold tracking-wide hidden xl:inline">Development Consultancy & Construction Services</span>
+            <span className="text-primary font-semibold tracking-wide hidden xl:inline">Development Consultancy & Construction Services
+
+</span>
             <span className="w-px h-3 bg-white/20 hidden xl:inline" />
             <a href="tel:+254721466368" className="flex items-center gap-1.5 hover:text-primary transition-colors"><Phone className="w-3 h-3" /> +254 721 466 368</a>
             <a href="mailto:countystr@gmail.com" className="flex items-center gap-1.5 hover:text-primary transition-colors"><Mail className="w-3 h-3" /> countystr@gmail.com</a>
@@ -100,9 +102,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      <motion.header
-          initial={{ y: -100 }}
-          animate={{ y: 0 }}
+      <motion.header initial={{ y: -100 }} animate={{ y: 0 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className={`transition-all duration-300 ${scrolled ? 'bg-card/95 backdrop-blur-xl shadow-sm border-b border-border/40' : ''}`}>
           
