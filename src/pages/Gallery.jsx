@@ -98,7 +98,7 @@ export default function Gallery() {
                 onClick={() => setLightbox(g)}>
                 
                   <Image src={g.url} alt={g.title} fittingType="fill" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity hidden" />
+                  
                   <div className="absolute bottom-0 left-0 right-0 p-4">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-primary font-semibold">{g.category}</span>
                     <h3 className="font-heading text-sm font-bold text-white leading-tight mt-1">{g.title}</h3>
