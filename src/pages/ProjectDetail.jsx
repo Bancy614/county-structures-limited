@@ -159,7 +159,7 @@ export default function ProjectDetail() {
                     onClick={() => setActiveImage(i)}
                     className={`relative rounded-lg overflow-hidden aspect-square group ${activeImage === i ? 'ring-2 ring-primary' : ''}`}>
                     
-                        <Image src="https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/dd50893fa_20250826_093224.jpg" alt={`${project.title} — image ${i + 1}`} fittingType="fill" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                        <Image src={img} alt={`${project.title} — image ${i + 1}`} fittingType="fill" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                       </button>
                   )}
                   </div>
