@@ -96,9 +96,8 @@ export default function Gallery() {
                 transition={{ duration: 0.4, delay: i * 0.04 }}
                 className={`group relative rounded-xl overflow-hidden shadow-lg cursor-pointer ${aspectClass(g.aspect)}`}
                 onClick={() => setLightbox(g)}>
-                
-                  
-                  
+                  <Image src={g.url} alt={g.title} fittingType="fill" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-4">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-primary font-semibold">{g.category}</span>
                     <h3 className="font-heading text-sm font-bold text-white leading-tight mt-1">{g.title}</h3>

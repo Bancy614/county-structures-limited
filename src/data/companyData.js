@@ -317,8 +317,7 @@ export const projects = [
 ];
 
 export const galleryImages = [
-  { url: IMG.hallAnimate, category: 'Construction', title: 'Training Hall for ASDF Masii — Construction Progress', project: 'asd-foundation-office', aspect: 'wide' },
-  { url: IMG.guestHouse, category: 'Commercial', title: 'Guest House — Rendering vs Construction', project: 'machakos-guest-house', aspect: 'wide' },
+
   { url: IMG.samarHero, category: 'Residential', title: 'Samar Towers — Multi-View Showcase', project: 'samar-towers-apartments', aspect: 'tall' },
   { url: IMG.building, category: 'Commercial', title: 'Training Hall for ASDF Masii', project: 'asd-foundation-office', aspect: 'tall' },
   { url: IMG.apartment, category: 'Residential', title: '30-Room Guest House', project: 'machakos-guest-house', aspect: 'wide' },
