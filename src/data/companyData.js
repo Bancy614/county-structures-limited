@@ -319,15 +319,13 @@ export const projects = [
 export const galleryImages = [
 
   { url: IMG.samarHero, category: 'Residential', title: 'Samar Towers — Multi-View Showcase', project: 'samar-towers-apartments', aspect: 'tall' },
-  { url: IMG.building, category: 'Commercial', title: 'Training Hall for ASDF Masii', project: 'asd-foundation-office', aspect: 'tall' },
-  { url: IMG.apartment, category: 'Residential', title: '30-Room Guest House', project: 'machakos-guest-house', aspect: 'wide' },
+  { url: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/2d63c779a_ASDF.png', category: 'Commercial', title: 'Training Hall for ASDF Masii', project: 'asd-foundation-office', aspect: 'tall' },
+  { url: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/5ef168751_GuestHouse.png', category: 'Residential', title: '30-Room Guest House', project: 'machakos-guest-house', aspect: 'wide' },
   { url: IMG.blueprint, category: 'Institutional', title: "Murang'a University Master Plan", project: 'muranga-university-games', aspect: 'tall' },
   { url: IMG.namaPetrol, category: 'Industrial', title: 'NAMA Energy Petrol Station', project: 'nama-energy-petrol-station', aspect: 'square' },
   { url: IMG.blueprint, category: 'Industrial', title: "Tai's Farm Abattoir Plans", project: 'tais-farm-abattoir', aspect: 'wide' },
-  { url: IMG.site, category: 'Construction', title: 'Active Construction Site', project: '', aspect: 'wide' },
   { url: IMG.kyaloHouse, category: 'Residential', title: 'Kyalo Residence', project: 'kyalo-residence', aspect: 'tall' },
   { url: IMG.blueprint, category: 'Institutional', title: 'Bible Fellowship Church', project: 'bible-fellowship-church', aspect: 'wide' },
-  { url: IMG.site, category: 'Construction', title: 'Samar Towers Construction', project: 'samar-towers-apartments', aspect: 'tall' },
 ];
 
 export const photoAlbums = [
