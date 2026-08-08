@@ -7,7 +7,7 @@ const IMG = {
   blueprint: 'https://images.unsplash.com/photo-1503387762-1571e267bf00?w=1200&q=80',
   site: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80',
   plans: 'https://images.unsplash.com/photo-1530124566582-a618bc261531?w=1200&q=80',
-  logo: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/fd3a0ea42_logo2.png',
+  logo: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/5fae4e0c4_logo2.png',
   samarHero: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/a99d2a1bd_SamarHero.png',
   hallAnimate: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/beb4a7c92_HallAnimate.png',
   guestHouse: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/e5adfec14_GuestHouse.png',
