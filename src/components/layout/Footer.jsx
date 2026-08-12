@@ -27,7 +27,7 @@ const services = [
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-charcoal text-white/70 relative overflow-hidden">
+    <footer className="bg-[#12043B] text-white/70 relative overflow-hidden">
       <div className="structural-grid-dark absolute inset-0 opacity-50" />
       <div className="relative max-w-9xl mx-auto px-6 pt-20 pb-8">
         {/* CTA strip */}

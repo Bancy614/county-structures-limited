@@ -98,7 +98,7 @@ export default function Navbar() {
             <a href="tel:+254721466368" className="flex items-center gap-1.5 hover:text-gold transition-colors"><Phone className="w-3 h-3" /> +254 721 466 368</a>
             <a href="mailto:countystr@gmail.com" className="flex items-center gap-1.5 hover:text-gold transition-colors"><Mail className="w-3 h-3" /> countystr@gmail.com</a>
           </div>
-          <span className="hidden lg:inline">NCA Registered Contractor · Est. 2011 ·  Kenya</span>
+          <span className="hidden lg:inline">NCA Registered Contractor Est. 2011 Kenya</span>
         </div>
       </div>
 
