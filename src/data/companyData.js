@@ -10,6 +10,7 @@ const IMG = {
   logo: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/0ca88c079_logo4.jpeg',
   samarHero: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/a99d2a1bd_SamarHero.png',
   heroPhoto: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/9b940f5de_HeroPhoto.png',
+  heroVideo: 'https://media.base44.com/videos/public/6a63f94e8a295d2bd7187207/4e2e05c13_Hero_Video.mp4',
   hallAnimate: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/beb4a7c92_HallAnimate.png',
   guestHouse: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/e5adfec14_GuestHouse.png',
   namaPetrol: 'https://media.base44.com/images/public/6a63f94e8a295d2bd7187207/85d878423_PetrolStationforNAMAEnergyatNaroktownorTOTALILMASHARIANI.png',
