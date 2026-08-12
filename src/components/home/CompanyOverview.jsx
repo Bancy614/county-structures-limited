@@ -14,7 +14,7 @@ const pillars = [
 
 export default function CompanyOverview() {
   return (
-    <section className="py-24 lg:py-32 bg-background relative overflow-hidden">
+    <section className="py-24 lg:py-32 bg-primary/5 relative overflow-hidden">
       <div className="max-w-9xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image side */}
@@ -29,7 +29,7 @@ export default function CompanyOverview() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3, duration: 0.6 }}
-                className="absolute -bottom-6 -right-6 lg:-right-10 bg-card border border-border/40 rounded-xl p-5 shadow-xl"
+                className="absolute -bottom-6 -right-6 lg:-right-10 bg-primary text-primary-foreground rounded-xl p-5 shadow-xl"
               >
                 <div className="font-heading text-4xl font-bold text-primary">2011</div>
                 <div className="text-xs font-mono uppercase tracking-wider text-muted-foreground mt-1">Established</div>
@@ -61,7 +61,7 @@ export default function CompanyOverview() {
             <div className="grid sm:grid-cols-2 gap-4">
               {pillars.map((p, i) => (
                 <Reveal key={p.title} delay={0.15 + i * 0.08}>
-                  <div className="flex items-start gap-3 p-4 rounded-xl border border-border/40 hover:border-primary/40 hover:bg-primary/5 transition-all group">
+                  <div className="flex items-start gap-3 p-4 rounded-xl border border-primary/20 hover:border-primary hover:bg-primary/10 transition-all group">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <p.icon className="w-5 h-5" />
                     </div>

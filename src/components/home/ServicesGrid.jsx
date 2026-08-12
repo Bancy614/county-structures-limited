@@ -17,7 +17,7 @@ const services = [
 
 export default function ServicesGrid() {
   return (
-    <section className="py-24 lg:py-32 bg-background">
+    <section className="py-24 lg:py-32 bg-primary/5">
       <div className="max-w-9xl mx-auto px-6">
         <Reveal>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
@@ -42,7 +42,7 @@ export default function ServicesGrid() {
           {services.map((s) => (
             <RevealItem key={s.title}>
               <Link to="/services" className="group block h-full">
-                <div className="relative h-full p-6 rounded-xl border border-border/40 bg-card hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                <div className="relative h-full p-6 rounded-xl border border-primary/20 bg-card hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
                   {/* Category badge */}
                   <span className="absolute top-6 right-6 text-[10px] font-mono uppercase tracking-wider text-muted-foreground/50">{s.category}</span>
                   <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110 transition-all">

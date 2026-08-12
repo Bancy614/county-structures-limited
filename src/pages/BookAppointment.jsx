@@ -7,6 +7,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import SEO from '@/components/SEO';
+import PageHero from '@/components/PageHero';
 import Reveal from '@/components/animations/Reveal';
 import { Image } from '@/components/ui/image';
 import { IMG } from '@/data/companyData';
@@ -57,16 +58,7 @@ export default function BookAppointment() {
     <div>
       <SEO title="Book an Appointment" description="Schedule a consultation with County Structures Limited." image={IMG.site} />
 
-      <section className="relative h-[40vh] min-h-[300px] flex items-end overflow-hidden bg-charcoal">
-        <div className="absolute inset-0">
-          <Image src={IMG.heroPhoto} alt="County Structures construction site at sunrise — premium commercial and residential development across Kenya" fittingType="fill" className="w-full h-full object-cover animate-ken-burns" />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/30" />
-        </div>
-        <div className="relative max-w-9xl mx-auto px-6 pb-12">
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="font-heading text-4xl lg:text-6xl font-bold text-white tracking-tight">Book an Appointment</motion.h1>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="mt-3 text-lg text-white/60 max-w-2xl">Schedule a consultation with our multidisciplinary team — we'll confirm your appointment within 24 hours.</motion.p>
-        </div>
-      </section>
+      <PageHero title="Book an Appointment" subtitle="Schedule a consultation with our multidisciplinary team — we'll confirm your appointment within 24 hours." height="h-[40vh] min-h-[300px]" />
 
       <section className="py-24 lg:py-32 bg-background">
         <div className="max-w-3xl mx-auto px-6">

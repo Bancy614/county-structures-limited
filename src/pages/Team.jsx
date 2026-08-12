@@ -5,6 +5,7 @@ import { Image } from '@/components/ui/image';
 import { Link } from 'react-router-dom';
 import Reveal from '@/components/animations/Reveal';
 import SEO from '@/components/SEO';
+import PageHero from '@/components/PageHero';
 import { IMG } from '@/data/companyData';
 
 const team = [
@@ -119,16 +120,7 @@ export default function Team() {
         keywords="construction team Kenya, civil engineers, architects, environmental experts, County Structures team, EBK registered engineers"
         image={IMG.plans}
       />
-      <section className="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden bg-charcoal">
-        <div className="absolute inset-0">
-          <Image src={IMG.heroPhoto} alt="County Structures construction site at sunrise — premium commercial and residential development across Kenya" fittingType="fill" className="w-full h-full object-cover animate-ken-burns" />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/30" />
-        </div>
-        <div className="relative max-w-9xl mx-auto px-6 pb-12">
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="font-heading text-5xl lg:text-7xl font-bold text-white tracking-tight">Our Team</motion.h1>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="mt-3 text-lg text-white/60 max-w-2xl">Highly qualified professionals — architects, engineers, and specialists driving every project.</motion.p>
-        </div>
-      </section>
+      <PageHero title="Our Team" subtitle="Highly qualified professionals — architects, engineers, and specialists driving every project." />
 
       <section className="py-24 lg:py-32 bg-background">
         <div className="max-w-9xl mx-auto px-6">

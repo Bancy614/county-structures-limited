@@ -91,12 +91,12 @@ export default function Navbar() {
       <div className={`hidden md:block transition-all duration-300 ${scrolled ? 'h-0 opacity-0 overflow-hidden' : 'h-9 opacity-100'} ${dark ? 'bg-black/30 text-white/70' : 'bg-charcoal text-white/70'}`}>
         <div className="max-w-9xl mx-auto px-6 h-9 flex items-center justify-between text-xs font-mono">
           <div className="flex items-center gap-4">
-            <span className="text-primary font-semibold tracking-wide hidden xl:inline">Development Consultancy & Construction Services
+            <span className="text-gold font-semibold tracking-wide hidden xl:inline">Development Consultancy & Construction Services
 
 </span>
             <span className="w-px h-3 bg-white/20 hidden xl:inline" />
-            <a href="tel:+254721466368" className="flex items-center gap-1.5 hover:text-primary transition-colors"><Phone className="w-3 h-3" /> +254 721 466 368</a>
-            <a href="mailto:countystr@gmail.com" className="flex items-center gap-1.5 hover:text-primary transition-colors"><Mail className="w-3 h-3" /> countystr@gmail.com</a>
+            <a href="tel:+254721466368" className="flex items-center gap-1.5 hover:text-gold transition-colors"><Phone className="w-3 h-3" /> +254 721 466 368</a>
+            <a href="mailto:countystr@gmail.com" className="flex items-center gap-1.5 hover:text-gold transition-colors"><Mail className="w-3 h-3" /> countystr@gmail.com</a>
           </div>
           <span className="hidden lg:inline">NCA Registered Contractor · Est. 2011 ·  Kenya</span>
         </div>
@@ -174,7 +174,7 @@ export default function Navbar() {
             <Button
                 onClick={openQuote}
                 size="sm"
-                className="hidden sm:flex bg-primary text-primary-foreground hover:bg-primary/90 font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:scale-105 transition-all">
+                className="hidden sm:flex bg-gold text-charcoal hover:bg-gold/90 font-semibold shadow-lg shadow-gold/20 hover:shadow-gold/40 hover:scale-105 transition-all">
                 
               Request a Quote
             </Button>
@@ -224,7 +224,7 @@ export default function Navbar() {
               )}
               </div>
               <div className="p-6 border-t border-border/40 space-y-4">
-                <Button onClick={openQuote} className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold" size="lg">
+                <Button onClick={openQuote} className="w-full bg-gold text-charcoal hover:bg-gold/90 font-semibold" size="lg">
                   Request a Quote
                 </Button>
                 <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">

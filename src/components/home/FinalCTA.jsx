@@ -30,7 +30,7 @@ export default function FinalCTA() {
           </Reveal>
           <Reveal delay={0.2}>
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              <Button onClick={openQuote} size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold shadow-xl shadow-primary/20 hover:scale-105 transition-all group">
+              <Button onClick={openQuote} size="lg" className="bg-gold text-charcoal hover:bg-gold/90 font-semibold shadow-xl shadow-gold/20 hover:scale-105 transition-all group">
                 Request a Quote <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
               <a href="tel:+254721466368">

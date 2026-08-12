@@ -67,8 +67,8 @@ export default function BuildProcess() {
                 <div className="relative text-center lg:text-left">
                   {/* Icon node */}
                   <div className="relative inline-flex lg:flex">
-                    <div className="w-16 h-16 rounded-full bg-card border-2 border-primary/30 flex items-center justify-center shadow-lg relative z-10 mx-auto lg:mx-0 group-hover:border-primary transition-colors">
-                      <s.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
+                    <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground border-2 border-primary/30 flex items-center justify-center shadow-lg relative z-10 mx-auto lg:mx-0 transition-colors">
+                      <s.icon className="w-7 h-7 text-primary-foreground" strokeWidth={1.5} />
                     </div>
                   </div>
                   <div className="mt-6">

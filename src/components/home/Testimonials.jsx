@@ -63,7 +63,7 @@ export default function Testimonials() {
         <Reveal>
           <div className="flex items-center justify-center gap-2 mb-8">
             <div className="w-8 h-px bg-primary" />
-            <span className="text-xs font-mono uppercase tracking-widest text-primary font-semibold">Client Testimonials</span>
+            <span className="text-xs font-mono uppercase tracking-widest text-gold font-semibold">Client Testimonials</span>
             <div className="w-8 h-px bg-primary" />
           </div>
         </Reveal>
@@ -79,12 +79,12 @@ export default function Testimonials() {
               className="absolute inset-0 flex flex-col items-center justify-center"
             >
               <div className="flex gap-1 mb-6">
-                {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
+                {[...Array(5)].map((_, i) =>               <Star key={i} className="w-5 h-5 fill-gold text-gold" />)}
               </div>
               <blockquote className="font-heading text-2xl lg:text-3xl font-medium leading-snug tracking-tight mb-8 max-w-3xl">
                 "{testimonials[index].quote}"
               </blockquote>
-              <div className="font-bold text-lg text-primary">{testimonials[index].name}</div>
+              <div className="font-bold text-lg text-gold">{testimonials[index].name}</div>
               <div className="text-sm text-white/50 mt-1">{testimonials[index].title} · {testimonials[index].project}</div>
             </motion.div>
           </AnimatePresence>
@@ -92,15 +92,15 @@ export default function Testimonials() {
 
         {/* Controls */}
         <div className="flex items-center justify-center gap-4 mt-8">
-          <button onClick={prev} className="w-11 h-11 rounded-full border border-white/20 hover:border-primary hover:bg-primary hover:text-charcoal transition-all flex items-center justify-center" aria-label="Previous testimonial">
+          <button onClick={prev} className="w-11 h-11 rounded-full border border-white/20 hover:border-gold hover:bg-gold hover:text-charcoal transition-all flex items-center justify-center" aria-label="Previous testimonial">
             <ChevronLeft className="w-5 h-5" />
           </button>
           <div className="flex gap-2">
             {testimonials.map((_, i) => (
-              <button key={i} onClick={() => setIndex(i)} className={`h-2 rounded-full transition-all ${i === index ? 'w-8 bg-primary' : 'w-2 bg-white/30'}`} aria-label={`Go to testimonial ${i + 1}`} />
+              <button key={i} onClick={() => setIndex(i)} className={`h-2 rounded-full transition-all ${i === index ? 'w-8 bg-gold' : 'w-2 bg-white/30'}`} aria-label={`Go to testimonial ${i + 1}`} />
             ))}
           </div>
-          <button onClick={next} className="w-11 h-11 rounded-full border border-white/20 hover:border-primary hover:bg-primary hover:text-charcoal transition-all flex items-center justify-center" aria-label="Next testimonial">
+          <button onClick={next} className="w-11 h-11 rounded-full border border-white/20 hover:border-gold hover:bg-gold hover:text-charcoal transition-all flex items-center justify-center" aria-label="Next testimonial">
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>

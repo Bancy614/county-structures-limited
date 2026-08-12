@@ -17,7 +17,7 @@ export default function FeaturedProjects() {
   const filtered = active === 'All' ? projects : projects.filter((p) => p.category === active);
 
   return (
-    <section className="py-24 lg:py-32 bg-secondary/30">
+    <section className="py-24 lg:py-32 bg-primary/5">
       <div className="max-w-9xl mx-auto px-6">
         <Reveal>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
@@ -71,7 +71,7 @@ export default function FeaturedProjects() {
                   {/* Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <div className="flex items-center gap-3 mb-2 text-xs font-mono uppercase tracking-wider text-white/60">
-                      <span className="px-2 py-0.5 rounded bg-primary/90 text-charcoal font-semibold">{p.category}</span>
+                      <span className="px-2 py-0.5 rounded bg-primary text-primary-foreground font-semibold">{p.category}</span>
                       <span className={`flex items-center gap-1 ${p.status === 'Completed' ? 'text-green-400' : 'text-amber-400'}`}>
                         <span className="w-1.5 h-1.5 rounded-full bg-current" /> {p.status}
                       </span>

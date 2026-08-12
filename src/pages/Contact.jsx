@@ -10,6 +10,7 @@ import { Image } from '@/components/ui/image';
 import Reveal from '@/components/animations/Reveal';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 import SEO from '@/components/SEO';
+import PageHero from '@/components/PageHero';
 import { faqs, IMG } from '@/data/companyData';
 import { base44 } from '@/api/base44Client';
 
@@ -52,16 +53,7 @@ export default function Contact() {
         keywords="contact County Structures, construction quote Kenya, project inquiry, Machakos construction office, Nairobi construction company contact"
         image={IMG.site}
       />
-      <section className="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden bg-charcoal">
-        <div className="absolute inset-0">
-          <Image src={IMG.heroPhoto} alt="County Structures construction site at sunrise — premium commercial and residential development across Kenya" fittingType="fill" className="w-full h-full object-cover animate-ken-burns" />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/30" />
-        </div>
-        <div className="relative max-w-9xl mx-auto px-6 pb-12">
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="font-heading text-5xl lg:text-7xl font-bold text-white tracking-tight">Let's Build Together</motion.h1>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="mt-3 text-lg text-white/60 max-w-2xl">Tell us about your project — our team will respond within 24 hours.</motion.p>
-        </div>
-      </section>
+      <PageHero title="Let's Build Together" subtitle="Tell us about your project — our team will respond within 24 hours." />
 
       <section className="py-24 lg:py-32 bg-background">
         <div className="max-w-9xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16">

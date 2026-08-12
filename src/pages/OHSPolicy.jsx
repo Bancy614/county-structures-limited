@@ -4,6 +4,7 @@ import { Image } from '@/components/ui/image';
 import { ShieldCheck, ArrowLeft, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
+import PageHero from '@/components/PageHero';
 import Reveal from '@/components/animations/Reveal';
 import { IMG } from '@/data/companyData';
 
@@ -38,16 +39,7 @@ export default function OHSPolicy() {
       />
 
       {/* Hero */}
-      <section className="relative h-[40vh] min-h-[300px] flex items-end overflow-hidden bg-charcoal">
-        <div className="absolute inset-0">
-          <Image src={IMG.heroPhoto} alt="County Structures construction site at sunrise — premium commercial and residential development across Kenya" fittingType="fill" className="w-full h-full object-cover animate-ken-burns" />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/30" />
-        </div>
-        <div className="relative max-w-9xl mx-auto px-6 pb-12">
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="font-heading text-4xl lg:text-6xl font-bold text-white tracking-tight">OH&S Policy</motion.h1>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="mt-3 text-lg text-white/60 max-w-2xl">Occupational Health & Safety — County Structures Limited</motion.p>
-        </div>
-      </section>
+      <PageHero title="OH&S Policy" subtitle="Occupational Health & Safety — County Structures Limited" height="h-[40vh] min-h-[300px]" />
 
       {/* Content */}
       <section className="py-20 lg:py-28 bg-background">

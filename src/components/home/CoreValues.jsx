@@ -42,7 +42,7 @@ export default function CoreValues() {
               <div className="relative group h-full">
                 <div className="absolute inset-0 glass rounded-xl" />
                 <div className="relative p-8 rounded-xl h-full flex flex-col">
-                  <div className="font-mono text-5xl font-bold text-primary/20 mb-4">0{i + 1}</div>
+                  <div className="font-mono text-5xl font-bold text-gold/30 mb-4">0{i + 1}</div>
                   <h3 className="font-heading text-xl font-bold text-white mb-3">{v.title}</h3>
                   <p className="text-white/60 text-sm leading-relaxed">{v.desc}</p>
                   <div className="mt-6 h-px w-0 bg-primary group-hover:w-full transition-all duration-500" />

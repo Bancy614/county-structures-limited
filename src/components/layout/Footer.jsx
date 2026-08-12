@@ -37,7 +37,7 @@ export default function Footer() {
             <p className="mt-2 text-white/60">Ready to build something extraordinary? Let's start the conversation.</p>
           </div>
           <Link to="/contact">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold group">
+            <Button size="lg" className="bg-gold text-charcoal hover:bg-gold/90 font-semibold group">
               Start Your Build <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
@@ -57,7 +57,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
-                <a key={i} href="/" className="w-9 h-9 rounded-full bg-white/5 hover:bg-primary hover:text-charcoal flex items-center justify-center transition-all" aria-label="Social media">
+                <a key={i} href="/" className="w-9 h-9 rounded-full bg-white/5 hover:bg-gold hover:text-charcoal flex items-center justify-center transition-all" aria-label="Social media">
                   <Icon className="w-4 h-4" />
                 </a>
               ))}
@@ -71,7 +71,7 @@ export default function Footer() {
               {quickLinks.map((link) => (
                 <li key={link.path}>
                   <Link to={link.path} className="text-sm hover-gradient transition-colors flex items-center gap-2 group">
-                    <span className="w-0 h-px bg-primary group-hover:w-4 transition-all" />
+                    <span className="w-0 h-px bg-gold group-hover:w-4 transition-all" />
                     {link.label}
                   </Link>
                 </li>
@@ -96,19 +96,19 @@ export default function Footer() {
             <h3 className="font-heading text-sm font-bold uppercase tracking-wider text-white mb-5">Contact Us</h3>
             <ul className="space-y-3.5 text-sm">
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-gold shrink-0 mt-0.5" />
                 <a href="https://www.google.com/maps/search/?api=1&query=Hendon+Plaza+Machakos+Town+Kenya" target="_blank" rel="noopener noreferrer" className="text-white/60 hover-gradient transition-colors">#G1, Hendon Plaza, Machakos Town, Machakos County, Kenya</a>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-primary shrink-0" />
+                <Phone className="w-4 h-4 text-gold shrink-0" />
                 <a href="tel:+254721466368" className="text-white/60 hover:text-primary transition-colors">+254 721 466 368</a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-primary shrink-0" />
+                <Mail className="w-4 h-4 text-gold shrink-0" />
                 <a href="mailto:countystr@gmail.com" className="text-white/60 hover:text-primary transition-colors break-all">countystr@gmail.com</a>
               </li>
               <li className="flex items-center gap-3">
-                <Clock className="w-4 h-4 text-primary shrink-0" />
+                <Clock className="w-4 h-4 text-gold shrink-0" />
                 <span className="text-white/60">Mon – Fri: 8:00 AM – 5:00 PM</span>
               </li>
             </ul>
@@ -119,7 +119,7 @@ export default function Footer() {
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/40">© {year} County Structures Limited. All rights reserved. NCA Registered Contractor.</p>
           <div className="flex items-center gap-6 text-xs text-white/40">
-            <Link to="/ohs-policy" className="hover:text-primary transition-colors">OH&S Policy</Link>
+            <Link to="/ohs-policy" className="hover:text-gold transition-colors">OH&S Policy</Link>
           </div>
         </div>
       </div>

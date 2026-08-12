@@ -5,6 +5,7 @@ import { MapPin, Calendar, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 import Reveal from '@/components/animations/Reveal';
 import SEO from '@/components/SEO';
+import PageHero from '@/components/PageHero';
 import { projects, IMG } from '@/data/companyData';
 
 const filters = ['All', 'Commercial', 'Residential', 'Institutional', 'Industrial'];
@@ -23,16 +24,7 @@ export default function Projects() {
       />
 
       {/* Hero */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden bg-charcoal">
-        <div className="absolute inset-0">
-          <Image src={IMG.heroPhoto} alt="County Structures construction site at sunrise — premium commercial and residential development across Kenya" fittingType="fill" className="w-full h-full object-cover animate-ken-burns" />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/30" />
-        </div>
-        <div className="relative max-w-9xl mx-auto px-6 pb-12">
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="font-heading text-5xl lg:text-7xl font-bold text-white tracking-tight">Projects</motion.h1>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="mt-3 text-lg text-white/60 max-w-2xl">A portfolio of excellence — from commercial developments to residential landmarks across Kenya.</motion.p>
-        </div>
-      </section>
+      <PageHero title="Projects" subtitle="Explore our portfolio of commercial, residential, institutional, and industrial construction projects across Kenya." />
 
       {/* Filters + Grid */}
       <section className="py-20 lg:py-28 bg-background">
