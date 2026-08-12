@@ -21,7 +21,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-end pt-24 overflow-hidden bg-charcoal">
       {/* Background image with Ken Burns */}
       <div className="absolute inset-0">
-        <Image src={IMG.samarHero} alt="Samar Towers — premium residential apartment development by County Structures" fittingType="fill" className="w-full h-full object-cover animate-ken-burns" />
+        <Image src={IMG.heroPhoto} alt="County Structures construction site at sunrise — premium commercial and residential development across Kenya" fittingType="fill" className="w-full h-full object-cover animate-ken-burns" />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/50 to-charcoal/30" />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal/80 via-transparent to-transparent" />
       </div>

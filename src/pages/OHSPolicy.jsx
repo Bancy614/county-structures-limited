@@ -40,7 +40,7 @@ export default function OHSPolicy() {
       {/* Hero */}
       <section className="relative h-[40vh] min-h-[300px] flex items-end overflow-hidden bg-charcoal">
         <div className="absolute inset-0">
-          <Image src={IMG.samarHero} alt="County Structures construction site" fittingType="fill" className="w-full h-full object-cover" />
+          <Image src={IMG.heroPhoto} alt="County Structures construction site at sunrise — premium commercial and residential development across Kenya" fittingType="fill" className="w-full h-full object-cover animate-ken-burns" />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/30" />
         </div>
         <div className="relative max-w-9xl mx-auto px-6 pb-12">

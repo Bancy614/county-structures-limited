@@ -5,28 +5,40 @@ import Reveal from '@/components/animations/Reveal';
 
 const testimonials = [
   {
-    quote: "County Structures delivered our training hall on time and within budget. Their engineering precision and project management were exceptional throughout.",
-    name: 'Virginia Muteti',
-    title: 'Client — Guest House Project',
-    project: 'Machakos Town',
-  },
-  {
-    quote: "The team's multidisciplinary approach — from environmental assessment to construction — made our abattoir project seamless. True professionals.",
-    name: "Tai's Farm Limited",
-    title: 'EIA & Construction Client',
-    project: 'Kenya',
-  },
-  {
-    quote: "From structural design to final handover, County Structures exceeded our expectations. Their attention to safety and quality is unmatched in the region.",
-    name: 'Samar Ltd',
-    title: 'Client — Samar Towers',
-    project: 'Nairobi',
-  },
-  {
     quote: "Very good work so far.",
     name: 'Dr. David Kitavi',
-    title: 'County Director Technical Training',
+    title: 'Director Technical Training',
     project: 'Machakos County Government',
+  },
+  {
+    quote: "Good progress, quality work. Keep up",
+    name: 'Edward Manza',
+    title: 'County Works Officer',
+    project: 'Tana River County',
+  },
+  {
+    quote: "Great job and a warm welcome",
+    name: 'Evalyne Mbithi',
+    title: '',
+    project: "Murang'a University",
+  },
+  {
+    quote: "Great work. Keep it up",
+    name: 'Peter K. Malata',
+    title: 'Public Health Officer — Approval & Developments',
+    project: '',
+  },
+  {
+    quote: "Great plans, wonderful structure. Keep up the good work",
+    name: 'Rossette Mweni',
+    title: '',
+    project: '',
+  },
+  {
+    quote: "Construction done as per engineer's specifications and instructions",
+    name: 'Faith Munyira',
+    title: 'Sub-County Engineer',
+    project: 'Machakos',
   },
 ];
 
