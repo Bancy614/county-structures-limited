@@ -25,7 +25,7 @@
     --ring: 21 33 50;
     --charcoal: 15 23 35;
     --steel: 21 33 50;
-    --gold: 255 215 0;
+    --gold: 59 130 246;
     --orange: 255 87 34;
     --radius: 0.5rem;
     --font-heading: 'Inter', ui-sans-serif, system-ui, sans-serif;
@@ -111,7 +111,7 @@
 
   /* Text gradient */
   .text-gradient-gold {
-    background: linear-gradient(135deg, #FFB800 0%, #FF5722 100%);
+    background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -144,9 +144,9 @@
     animation: shimmer 1.5s infinite;
   }
 
-  /* Gradient hover effect — repeating-radial-gradient of #de1c59, #ebb02e, #ff6a00 */
+  /* Gradient hover effect — repeating-radial-gradient of #1D4ED8, #3B82F6, #60A5FA */
   .hover-gradient:hover {
-    background-image: repeating-radial-gradient(circle, #de1c59, #ebb02e, #ff6a00) !important;
+    background-image: repeating-radial-gradient(circle, #1D4ED8, #3B82F6, #60A5FA) !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
@@ -155,7 +155,7 @@
   }
 
   .hover-gradient-bg:hover {
-    background-image: repeating-radial-gradient(circle, #de1c59, #ebb02e, #ff6a00) !important;
+    background-image: repeating-radial-gradient(circle, #1D4ED8, #3B82F6, #60A5FA) !important;
     color: #ffffff !important;
     transition: all 0.3s ease;
   }
