@@ -64,7 +64,7 @@
 
   html {
     scroll-behavior: smooth;
-    background-color: #12043B;
+    background-color: #FFFFFF;
   }
 
   body {
@@ -82,8 +82,8 @@
   /* Structural grid background — mimics architectural drafting paper */
   .structural-grid {
     background-image:
-      linear-gradient(to right, hsl(var(--border) / 0.4) 0.5px, transparent 0.5px),
-      linear-gradient(to bottom, hsl(var(--border) / 0.4) 0.5px, transparent 0.5px);
+      linear-gradient(to right, rgb(var(--border) / 0.4) 0.5px, transparent 0.5px),
+      linear-gradient(to bottom, rgb(var(--border) / 0.4) 0.5px, transparent 0.5px);
     background-size: 64px 64px;
   }
 
@@ -139,7 +139,7 @@
     100% { background-position: 200% 0; }
   }
   .skeleton {
-    background: linear-gradient(90deg, hsl(var(--muted)) 25%, hsl(var(--muted)/0.5) 50%, hsl(var(--muted)) 75%);
+    background: linear-gradient(90deg, rgb(var(--muted)) 25%, rgb(var(--muted)/0.5) 50%, rgb(var(--muted)) 75%);
     background-size: 200% 100%;
     animation: shimmer 1.5s infinite;
   }
@@ -162,15 +162,15 @@
 
   /* Scrollbar */
   ::-webkit-scrollbar { width: 10px; height: 10px; }
-  ::-webkit-scrollbar-track { background: hsl(var(--background)); }
-  ::-webkit-scrollbar-thumb { background: hsl(var(--muted-foreground)/0.4); border-radius: 5px; }
-  ::-webkit-scrollbar-thumb:hover { background: hsl(var(--primary)/0.6); }
+  ::-webkit-scrollbar-track { background: rgb(var(--background)); }
+  ::-webkit-scrollbar-thumb { background: rgb(var(--muted-foreground)/0.4); border-radius: 5px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgb(var(--primary)/0.6); }
 
   /* Focus state — 3px Safety Gold border with 2px offset */
   *:focus-visible {
     outline: 2px solid transparent;
     outline-offset: 2px;
-    box-shadow: 0 0 0 2px hsl(var(--background)), 0 0 0 4px hsl(var(--primary));
+    box-shadow: 0 0 0 2px rgb(var(--background)), 0 0 0 4px rgb(var(--primary));
   }
 }
 
