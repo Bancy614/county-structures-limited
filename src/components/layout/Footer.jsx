@@ -95,17 +95,23 @@ export default function Footer() {
           <div>
             <h3 className="font-heading text-sm font-bold uppercase tracking-wider text-white mb-5">Contact Us</h3>
             <ul className="space-y-3.5 text-sm">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-gold shrink-0 mt-0.5" />
-                <a href="https://www.google.com/maps/search/?api=1&query=Hendon+Plaza+Machakos+Town+Kenya" target="_blank" rel="noopener noreferrer" className="text-white/60 hover-gradient transition-colors">#G1, Hendon Plaza, Machakos Town, Machakos County, Kenya</a>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=Hendon+Plaza+Machakos+Town+Kenya" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group">
+                  <MapPin className="w-4 h-4 text-gold shrink-0 mt-0.5 transition-colors group-hover:text-white" />
+                  <span className="text-white/60 hover-gradient transition-colors">#G1, Hendon Plaza, Machakos Town, Machakos County, Kenya</span>
+                </a>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-gold shrink-0" />
-                <a href="tel:+254721466368" className="text-white/60 hover:text-primary transition-colors">+254 721 466 368</a>
+              <li>
+                <a href="tel:+254721466368" className="flex items-center gap-3 group">
+                  <Phone className="w-4 h-4 text-gold shrink-0 transition-colors group-hover:text-white" />
+                  <span className="text-white/60 hover:text-primary transition-colors">+254 721 466 368</span>
+                </a>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-gold shrink-0" />
-                <a href="mailto:countystr@gmail.com" className="text-white/60 hover:text-primary transition-colors break-all">countystr@gmail.com</a>
+              <li>
+                <a href="mailto:countystr@gmail.com" className="flex items-center gap-3 group">
+                  <Mail className="w-4 h-4 text-gold shrink-0 transition-colors group-hover:text-white" />
+                  <span className="text-white/60 hover:text-primary transition-colors break-all">countystr@gmail.com</span>
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Clock className="w-4 h-4 text-gold shrink-0" />

@@ -57,9 +57,9 @@ const team = [
   {
     name: 'Tabitha Wavinya Muthini',
     title: 'Land Use Planner & Environmental Expert',
-    profession: 'Spatial Planner / Environmental Consultant',
+    profession: 'Physical Planner',
     email: 'tabithawavinya500@gmail.com',
-    bio: 'Motivated and environmentally conscious graduate with hands-on experience in land use planning, environmental assessments, and policy implementation. NEMA Registered Associate Expert with experience conducting Environmental Impact Assessments and Environmental Audits, guiding clients through the NEMA licensing and approval process.',
+    bio: 'Physical planner dealing with services like Change of use, subdivision, amalgamation, and master planning.',
     qualifications: ['NEMA Registered Associate Expert', 'Environmental Impact Assessment & Environmental Audits', 'Land Use Planning & Spatial Planning', 'GIS and Mapping (ArcGIS)', 'Stakeholder Engagement & Regulatory Compliance', 'Report Writing & Data Analysis'],
     education: ['B.A. in Spatial Planning, Jaramogi Oginga Odinga University of Science and Technology (2016-2020)'],
   },
